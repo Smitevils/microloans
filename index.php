@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Сервис Микрозаймов</title>
 	<!-- Meta Data / Мета данные -->
-	<meta name="description" content="Бесплатные онлайн учебники по HTML, CSS, JavaScript, jQuery, HDOM и AJAX" />
-	<meta name="keywords" content="HTML, XHTML, CSS, JavaScript, jQuery, HDOM, AJAX" />
+	<meta name="description" content="Микрозаймы" />
+	<meta name="keywords" content="Микрозаймы, Займы, Деньги" />
 	<!-- Styles / Стили -->
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>

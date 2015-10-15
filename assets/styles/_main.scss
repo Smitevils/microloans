@@ -1,0 +1,219 @@
+header {
+	height: 102px;
+	background-color: $bg-1;
+	font-size: 0;
+}
+.header__logo-container {
+	width: 15%; height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	//
+	line-height: 102px;
+	//
+	img[alt="logo"] {display: inline-block;}
+	img[alt="logo-mini"] {display: none;}
+}
+.header__menu-container {
+	width: 40%; height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 98px;
+	//
+	ul {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		font-size: 0; // убираем отступы между элементами li
+		//
+		li {
+			display: inline-block;
+			padding-right: 40px;
+			&:first-child {padding-left: 25px;}
+			&:last-child {padding-right: 25px;}
+			//
+			a {
+				@include MyriadProBold;
+				color: $f-1;
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				//
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.header__calculator-container {
+	display: inline-block;
+	vertical-align: top;
+	width: 21%; height: 100%;
+	vertical-align: top;
+}
+.header__calculator-button {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	@include userSelectNone;
+	width: 50%; height: 100%;
+	background-color: $bg-3;
+	cursor: pointer;
+	//
+	p {
+		@include MyriadProBold;
+		font-weight: 800;
+		color: $f-2;
+		font-size: 14px; margin: 0; padding: 0 20%;
+	}
+}
+.header__calculator-button.active {
+	background-color: $bg-4;
+	//
+	& p {
+		color: $f-3;
+	}
+}
+.header__calculator-block {
+	width: 300px; min-height: 300px;
+	position: absolute;
+	display: table;
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	padding: 50px;
+	box-sizing: border-box;
+}
+#calculator-1, #calculator-2 {display: none; overflow: hidden;}
+// calculator content
+.calculator-content {
+	font-size: 14px;
+	display: table-cell;
+	width: 100%; height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	color: $f-6;
+	//
+	a {color: $f-6;}
+	//
+	h1 {
+		@include MyriadProBold;
+		font-weight: 800;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	span {
+		@include MyriadProBold;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+}
+.calculator-first-content__switch-container {
+	vertical-align: middle;
+	//
+	span {margin: 0 10px; line-height: 40px; vertical-align: middle;}
+}
+
+span.calculator_switch {
+	width: 82px; height: 40px; display: inline-block;
+	background-color: rgba(255,255,255,0.35);
+	border-radius: 20px;
+	position: relative;
+	//
+	i {
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 20px;
+		@include transition-03s;
+		background: url(../img/icons/switch-btn.png) no-repeat center;
+		background-size: contain;
+		//
+	}
+	&[data-switch-pos="1"] i {
+		left: 0px;
+	}
+	&[data-switch-pos="2"] i {
+		left: 42px;
+	}
+}
+
+//
+.header__phone-cabinet-container {
+	display: inline-block;
+	vertical-align: top;
+	width: 24%; height: 100%;
+	background-color: $bg-2;
+}
+.header__phone-container {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	vertical-align: top;
+	width: 80%; height: 100%;
+	//
+	a {
+		@include MyriadProBold;
+		font-size: 18px;
+		line-height: 26px;
+		color: $f-4;
+		vertical-align: middle;
+		text-decoration: none;
+		font-weight: 700;
+		&:hover {text-decoration: none;}
+		&:before {
+			@include transition-03s;
+			content: "";
+			// position: absolute;
+			// top: 0; left: 0;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 26px; height: 26px;
+			background: url(../img/icons/red-circle-phone.png) no-repeat center;
+			background-size: contain;
+		}
+		&:hover:before {
+			@include rotate360;
+		}
+	}
+}
+.header__cabinet-container {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	vertical-align: top;
+	width: 20%; height: 100%;
+}
+.header__cabinet-button {
+	@include MyriadProRegular;
+	font-size: 12px;
+	color: $f-5;
+	text-align: center;
+	position: relative;
+	margin-top: 22px;
+	cursor: pointer;
+	@include userSelectNone;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -22px; left: 50%;
+		width: 14px; height: 18px;
+		margin-left: -7px;
+		background: url(../img/icons/human.png) no-repeat center;
+		background-size: contain;
+	}
+}
+
+.header__hamburger {
+	display: none;
+	vertical-align: top;
+	float: right;
+	cursor: pointer;
+	width: 10%; height: 100%;
+	background: url(../img/icons/menu48.png) no-repeat center;
+}

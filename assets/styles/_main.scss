@@ -2,6 +2,7 @@ header {
 	height: 102px;
 	background-color: $bg-1;
 	font-size: 0;
+	z-index: 999999;
 }
 .header__logo-container {
 	width: 15%; height: 100%;
@@ -79,8 +80,9 @@ header {
 .header__calculator-block {
 	width: 300px; min-height: 300px;
 	position: absolute;
+	z-index: 9999;
 	display: table;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(46,48,55,0.7);
 	color: #fff;
 	padding: 50px;
 	box-sizing: border-box;
@@ -115,6 +117,239 @@ header {
 	//
 	span {margin: 0 10px; line-height: 40px; vertical-align: middle;}
 }
+.calculator__tabs-container {
+	margin: 20px 0;
+	//
+	ul {
+		display: table; list-style: none; padding: 0;
+		width: 100%;
+		//
+		li {
+			display: table-cell;
+			width: 25%;
+		}
+	}
+	//
+}
+.calculator__tab {
+	cursor: pointer;
+	text-align: center;
+	//
+	p {
+		@include MyriadProRegular; margin: 0; padding: 0;
+		font-size: 12px;
+		color: $f-7;
+		@include transition-03s;
+	}
+	&.active {
+		//
+		p {
+			color: $f-8;
+		}
+	}
+}
+
+#calculator-1 .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-gift-white.png) no-repeat center;
+			background-size: 28px 32px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-gift-red.png) no-repeat center;
+				background-size: 28px 32px;
+			}
+		}
+	}
+}
+
+#calculator-1 .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-home-white.png) no-repeat center;
+			background-size: 32px 26px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-home-red.png) no-repeat center;
+				background-size: 32px 26px;
+			}
+		}
+	}
+}
+
+#calculator-1 .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-car-white.png) no-repeat center;
+			background-size: 32px 18px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-car-red.png) no-repeat center;
+				background-size: 32px 18px;
+			}
+		}
+	}
+}
+
+#calculator-1 .calculator__tabs-container .tab-4 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-bd-white.png) no-repeat center;
+			background-size: 26px 32px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-bd-red.png) no-repeat center;
+				background-size: 26px 32px;
+			}
+		}
+	}
+}
+/* калькулятор заемщика --> для физ. лиц */
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-clock-white.png) no-repeat center;
+			background-size: 35px 31px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-clock-red.png) no-repeat center;
+				background-size: 35px 31px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-tower-white.png) no-repeat center;
+			background-size: 32px 35px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-tower-red.png) no-repeat center;
+				background-size: 32px 35px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-auto-white.png) no-repeat center;
+			background-size: 34px 28px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-auto-red.png) no-repeat center;
+				background-size: 34px 28px;
+			}
+		}
+	}
+}
+
+/************************/
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-graph-white.png) no-repeat center;
+			background-size: 36px 29px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-graph-red.png) no-repeat center;
+				background-size: 36px 29px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-tie-white.png) no-repeat center;
+			background-size: 14px 40px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-tie-red.png) no-repeat center;
+				background-size: 14px 40px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-man-white.png) no-repeat center;
+			background-size: 20px 27px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-man-red.png) no-repeat center;
+				background-size: 20px 27px;
+			}
+		}
+	}
+}
 
 span.calculator_switch {
 	width: 82px; height: 40px; display: inline-block;
@@ -141,6 +376,157 @@ span.calculator_switch {
 		left: 42px;
 	}
 }
+
+.calculator__slider-container {
+	//
+	ul {
+		display: table; width: 100%;
+		padding: 0;
+		//
+		li {display: table-cell;}
+		li:nth-child(1) {
+			//
+			p {
+				width: 30%;
+				@include MyriadProBold;
+				font-weight: 800;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+		li:nth-child(2) {width: 40%;}
+		li:nth-child(3) {
+			width: 30%;
+			//
+			p {
+				@include MyriadProRegular;
+				font-size: 14px;
+				font-weight: normal;
+				//
+				span {
+					@include MyriadProBold;
+					font-weight: bold;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+.calculator__result {
+	width: 100%;
+	padding: 10px 0 0 0;
+	//
+	ul {
+		width: 100%;
+		display: table;
+		padding-left: 0;
+		//
+		li {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		li:nth-child(1) {
+			text-align: left;
+			//
+			p {
+				@include MyriadProRegular;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+			}
+			span {
+				@include MyriadProBold;
+				font-size: 30px;
+				font-weight: bold;
+				//
+				i {
+					@include MyriadProRegular;
+					font-size: 14px;
+					font-weight: normal;
+					font-style: normal;
+					margin: 0 10px;
+				}
+			}
+		}
+		li:nth-child(3) {
+			a {
+				@include MyriadProBold;
+				font-weight: bold;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.calculator__result-btn {
+	display: inline-block;
+	padding: 14px 32px;
+	background-color: $bg-5;
+	color: $f-9;
+	font-size: 16px;
+	@include MyriadProBold;
+	font-weight: bold;
+	border-radius: 26px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+/* calculator faces block */
+
+.first-calculator__phisic-faces {padding: 0 20px;}
+.first-calculator__legal-faces {padding: 0 20px;}
+
+/**/
+
+.borrower-calculator-phisic {
+	padding: 0 20px;
+}
+.borrower-calculator-legal {
+	padding: 0 20px;
+	display: none;
+}
+/* noUiSlider theme */
+.nouislider {
+	position: relative;
+	&:before {
+		content: "";
+		width: 100%; height: 10px;
+		position: absolute;
+		left: 0;
+		top: -10px;
+		background: url(../img/icons/dashed.png) repeat-x center;
+	}
+}
+.noUi-origin {
+	top: -3px!important;
+}
+.noUi-horizontal {
+	height: 8px!important;
+}
+.noUi-horizontal .noUi-handle {
+	width: 25px!important;
+	height: 25px!important;
+	left: -17px;
+	top: -6px;
+	border: none;
+	box-shadow: none;
+	background: url(../img/icons/slider-dot.png) no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	&:before, &:after {display: none;}
+}
+.nouislider-under-value {
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	margin-left: -100px; top: -20px;
+	@include MyriadProRegular;
+	font-size: 14px!important;
+	font-weight: 100!important;
+}
+/* /noUiSlider theme */
+
 
 //
 .header__phone-cabinet-container {
@@ -216,4 +602,181 @@ span.calculator_switch {
 	cursor: pointer;
 	width: 10%; height: 100%;
 	background: url(../img/icons/menu48.png) no-repeat center;
+}
+
+/******************************* main *************************************/
+
+main {
+	width: 100%; height: 2000px;
+	position: relative;
+}
+
+.bid-call-btn {
+	display: block;
+	position: absolute;
+	z-index: 9999;
+	left: 0; top: 0;
+	width: 100px; height: 100px;
+	background-color: $bg-2;
+	cursor: pointer;
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	padding: 20px;
+	//
+	p {
+		text-align: center;
+		@include MyriadProBold;
+		font-size: 12px;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: $f-10;
+		//
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 100%; height: 24px;
+			background: url(../img/icons/phone.png) no-repeat center;
+		}
+	}
+}
+
+/* Slider */
+
+.slider-container {
+	padding-left: 100px;
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+
+#slider-fade {
+	position: relative; width: 100%; height: 100%;
+	//
+	.slide {
+		width: 100%; height: 700px;
+		outline: none!important;
+	}
+	.slide-1 {
+		background: url(../img/slider/slide-1.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.slide-2 {
+		background: url(../img/slider/slide-2.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.slide-3 {
+		background: url(../img/slider/slide-3.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+.slider-text-box {
+	width: 286px; height: 262px;
+	background-color: $bg-6;
+	position: absolute;
+	z-index: 99999;
+	bottom: 0; left: 0;
+	padding: 44px;
+	color: $f-11;
+	//
+	h3 {
+		@include MyriadProBold;
+		font-weight: 800;
+		font-size: 30px;
+		width: 100%;
+		text-transform: uppercase;
+		margin: 0; padding: 0;
+		margin: 5px 0;
+	}
+	p {
+		@include MyriadProRegular;
+		width: 100%;
+		font-size: 16px;
+		margin: 5px 0;
+	}
+}
+.slider-rext-box-btn {
+	display: inline-block;
+	border: 1px solid #b5b7c0;
+	@include MyriadProBold;
+	font-size: 12px;
+	font-weight: 800;
+	padding: 12px 28px;
+	cursor: pointer;
+	margin: 5px 0;
+	&:hover {
+		background-color: rgba(0,0,0,0.05);
+	}
+}
+
+.slider-nav-container {
+	position: absolute;
+	top: -70px; left: 0;
+	width: 140px; height: 70px;
+}
+
+.slider-nav-btn-left {
+	width: 50%; height: 100%;
+	cursor: pointer;
+	float: left;
+	background-color: $bg-2;
+	position: relative;
+	@include transition-03s;
+	//
+	&:after {
+		@include transition-03s;
+		content: "";
+		width: 14px; height: 26px;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+		display: block;
+		background: url(../img/icons/slider-nav-arrow-left.png) no-repeat center;
+		background-size: 14px 26px;
+	}
+	&:hover:after {left: -8px;}
+}
+.slider-nav-btn-right {
+	width: 50%; height: 100%;
+	cursor: pointer;
+	float: right;
+	background-color: $bg-7;
+	position: relative;
+	@include transition-03s;
+	//
+	&:after {
+		@include transition-03s;
+		content: "";
+		width: 14px; height: 26px;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+		display: block;
+		background: url(../img/icons/slider-nav-arrow-right.png) no-repeat center;
+		background-size: 14px 26px;
+	}
+	&:hover:after {right: -6px;}
+}
+
+/************ scheme **************/
+
+.scheme-container {
+	margin-left: 100px; margin-right: 100px;
+}
+
+.scheme-steps-block {
+	height: 264px;
+}
+
+.scheme-firft-step-container {
+	display: inline-block;
+	vertical-align: top;
+	background-color: $bg-7;
+	width: 286px;
+	height: 262px;
+	padding: 44px;
+}
+.scheme-three-containers {
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3%;
 }

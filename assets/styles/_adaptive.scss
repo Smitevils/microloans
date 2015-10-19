@@ -42,7 +42,7 @@
 	.header__phone-container a:before {width: 20px; height: 20px; line-height: 20px;}
 }
 @media screen and (max-width: 700px) {
-	header {background-color: $bg-2; position: fixed; width: 100%;}
+	header {background-color: $bg-2; position: fixed; width: 100%; margin-top: -60px;}
 	.header__logo-container {
 		display: block; float: left; width: 20%;
 	}
@@ -82,3 +82,28 @@
 }
 
 /* /header */
+
+/* slider */
+@media screen and (max-width: 1200px) {
+	.slider-container {height: 500px;}
+	#slider-fade .slide {height: 500px;}
+}
+@media screen and (max-width: 700px) {
+	body {
+		margin-top: 60px;
+	}
+	/* скрываем кнопку заказа звонка*/
+	.bid-call-btn {display: none;}
+	.slider-container {padding-left: 0;}
+	//
+	.slider-text-box {
+		width: 100%;
+		height: 200px;
+		padding: 10px;
+	}
+}
+/* scheme */
+@media screen and (max-width: 700px) {
+	.scheme-container {margin-left: 0; margin-right: 0;}
+}
+

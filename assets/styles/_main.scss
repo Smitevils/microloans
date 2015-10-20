@@ -607,7 +607,7 @@ span.calculator_switch {
 /******************************* main *************************************/
 
 main {
-	width: 100%; height: 2000px;
+	width: 100%; //height: 2000px;
 	position: relative;
 }
 
@@ -761,22 +761,432 @@ main {
 
 .scheme-container {
 	margin-left: 100px; margin-right: 100px;
+	//height: 262px;
 }
-
-.scheme-steps-block {
-	height: 264px;
-}
-
-.scheme-firft-step-container {
+.scheme-step-title-container {
 	display: inline-block;
 	vertical-align: top;
+	position: absolute;
 	background-color: $bg-7;
 	width: 286px;
 	height: 262px;
-	padding: 44px;
+	padding: 44px; //coins-ghost.png
+	//
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0; right: -18px;
+		width: 234px;
+		height: 262px;
+		background: url(../img/icons/red-man.png) no-repeat center;
+		background-size: contain;
+	}
+	//
+	.scheme-step-title-content {
+		position: relative;
+		//
+		h2 {
+			@include MyriadProBold;
+			font-size: 30px;
+			color: $f-6;
+			text-transform: uppercase;
+			margin: 0;
+			//
+			&:before {
+				content: "";
+				display: block;
+				height: 60px;
+				background: url(../img/icons/coins-ghost.png) no-repeat left center;
+				background-size: contain;
+			}
+		}
+	}
 }
-.scheme-three-containers {
+.scheme-steps-wrap {
+	width: 100%;
+	float: right;
+	//
+	.row {margin-left: 286px;}
+}
+.scheme-step-block {
+	width: 100%;
+	height: 262px;
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsBottom;
+	//
+	.scheme-step-content {
+		text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 16px; height: 27px;
+			position: absolute;
+			top: 40px; right: -10px;
+			background: url(../img/icons/step-arrow.png) no-repeat center;
+			background-size: contain;
+		}
+		//
+		p {
+			@include MyriadProBold;
+			font-size: 16px;
+			color: #464d52;
+			text-transform: uppercase;
+			padding: 10px 0;
+		}
+	}
+}
+
+
+/************ methods **************/
+
+.methods-container {
+	margin-left: 100px; margin-right: 100px;
+}
+
+.methods-steps-wrap {
+	width: 100%;
+	float: right;
+	//
+	.row {margin-left: 286px;}
+}
+.methods-step-title-container {
 	display: inline-block;
 	vertical-align: top;
-	width: 33.3%;
+	position: absolute;
+	background-color: $bg-10;
+	width: 286px;
+	height: 262px;
+	padding: 44px; //coins-ghost.png
+	//
+	.methods-step-title-content {
+		position: relative;
+		padding-top: 24px;
+		//
+		h2 {
+			@include MyriadProBold;
+			font-size: 30px;
+			color: $f-6;
+			text-transform: uppercase;
+			margin: 0;
+		}
+	}
+}
+.methods-step-block {
+	width: 100%;
+	height: 262px;
+	@include InlineFlex;
+	@include JustifyLeft;
+	@include AlignItemsBottom;
+	//
+	.methods-step-content {
+		text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		//
+		p {
+			@include MyriadProBold;
+			width: 140px;
+			font-size: 16px;
+			color: #464d52;
+			text-transform: uppercase;
+			padding: 10px 0;
+			position: relative;
+			text-align: left;
+		}
+	}
+}
+.methods-step-block.methods-step-1 {
+	//
+	&:after {
+		content: "01";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-2 {
+	//
+	&:after {
+		content: "02";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-3 {
+	//
+	&:after {
+		content: "03";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-4 {
+	//
+	&:after {
+		content: "04";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+
+/************ blocks titles **************/
+
+h3.block-title {
+	@include MyriadProBold;
+	font-size: 36px; margin: 0; padding: 40px 0;
+	color: $f-11;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/************ benefits **************/
+
+.benefits {
+	padding-left: 100px; margin-right: 100px;
+	background-color: $bg-8;
+	padding-bottom: 60px;
+	//
+	.row {margin-left: 0; margin-right: 0;}
+	//
+	.col-lg-3 {text-align: center; padding: 30px 0;}
+	//
+	i {
+		@include MyriadProBold;
+		font-size: 21px;
+		font-style: normal;
+		color: $f-11;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 0;
+	}
+	//
+	i.first-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-1.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.second-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-2.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.third-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-3.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.fourth-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -80px;
+			background: url(../img/icons/benefit-4.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+}
+
+/************ reviews **************/
+
+.reviews {
+	padding-right: 100px; margin-left: 100px;
+	background-color: $bg-8;
+	padding-bottom: 60px;
+}
+
+.reviews__slider-wrap {
+	width: 100%;
+}
+
+#reviews__slider {
+	width: 90%; margin: 0 auto;
+}
+
+.reviews__block {
+	margin: 0 40px;
+	outline: none!important;
+}
+
+.reviews__text {
+	position: relative;
+	padding: 60px 60px;
+	//
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 20px; top: 54px;
+		width: 30px; height: 30px;
+		background: url(../img/icons/quote-left.png) no-repeat center;
+		background-size: contain;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 20px; bottom: 54px;
+		width: 30px; height: 30px;
+		background: url(../img/icons/quote-right.png) no-repeat center;
+		background-size: contain;
+	}
+}
+.reviews__header {
+	margin: 0 10px;
+	background-color: $bg-9;
+	border-radius: 28px/35px;
+	height: 64px;
+	line-height: 64px;
+	@include MyriadProBold;
+	font-size: 18px;
+	color: $f-12;
+	text-transform: uppercase;
+	//
+	img {
+		width: 64px; height: 64px;
+		float: left;
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+}
+
+#reviews__slider .slick-prev, .slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 0%;
+	display: block;
+	width: 16px;
+	height: 27px;
+	margin-top: 0px;
+	padding: 0;
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: #000;
+}
+#reviews__slider .slick-next {
+	right: -28px; // -28
+	background: url(../img/icons/slider-arrow-right.png) no-repeat center;
+	background-size: contain;
+}
+#reviews__slider .slick-prev {
+	left: -28px;
+	background: url(../img/icons/slider-arrow-left.png) no-repeat center;
+	background-size: contain;
+}
+
+/************ footer **************/
+
+footer {
+	background-color: $bg-10; padding: 0 100px;
+	color: $f-13;
+	//
+	.footer-content {
+		padding: 20px 0;
+	}
+	//
+	.footer-underline {
+		border-top: 1px solid #444650;
+		//
+		p {
+			@include MyriadProBold;
+			font-size: 14px;
+		}
+		//
+		p:first-child {
+			float: left;
+		}
+		p:last-child {
+			float: right;
+		}
+	}
+	//
+	address {
+		font-style: normal;
+	}
+	ul {
+		padding-left: 0; list-style: none;
+		li {
+			margin: 5px 0;
+		}
+	}
+	.footer-1-column {
+		h5 {@include MyriadProBold; font-size: 16px; color: $f-14; margin: 15px 0;}
+		p {@include MyriadProRegular; font-size: 18px; color: $f-14;}
+		a {
+			@include MyriadProBold; font-size: 18px;
+			color: $f-15;
+			//
+			&:hover {text-decoration: none;}
+		}
+	}
+	.footer-2-column, .footer-3-column, .footer-4-column {
+		h4 {
+			@include MyriadProBold; font-size: 18px;
+			text-transform: uppercase;
+			color: $f-14;
+			margin: 15px 0;
+		}
+		a {
+			color: #b7b7b7;
+			@include MyriadProRegular;
+			font-size: 14px;
+			//
+			&:hover {text-transform: none;}
+		}
+	}
+	.footer-3-column ul li {width: 46%; float: left;}
 }

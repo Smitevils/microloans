@@ -338,19 +338,261 @@
 		</div>
 		<!-- /slider -->
 		<!-- scheme -->
-		<div class="scheme-container">
-			<div class="row">
-				<div class="scheme-steps-block scheme-firft-step-container">
-					dsfsd
+		<div class="scheme-container clearfix">
+			<div class="scheme-step-title-container">
+				<div class="scheme-step-title-content">
+					<h2>
+						Схема<br>получения<br>займа
+					</h2>
 				</div>
-				<div class="scheme-steps-block scheme-three-containers">
-					dsgdfgdrfg
+			</div>
+			<div class="scheme-steps-wrap">
+				<div class="row">
+					<div class="col-sm-4 col-lg-4">
+						<!-- block -->
+						<div class="scheme-step-block">
+							<div class="scheme-step-content">
+								<img src="assets/img/icons/step-1.png" alt="#">
+								<p>
+									Заполняем форму
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+					<div class="col-sm-4 col-lg-4">
+						<!-- block -->
+						<div class="scheme-step-block">
+							<div class="scheme-step-content">
+								<img src="assets/img/icons/step-2.png" alt="#">
+								<p>
+									Заполняем форму
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+					<div class="col-sm-4 col-lg-4">
+						<!-- block -->
+						<div class="scheme-step-block">
+							<div class="scheme-step-content">
+								<img src="assets/img/icons/step-3.png" alt="#">
+								<p>
+									Заполняем форму
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- /scheme -->
+		<!-- benefits -->
+		<div class="benefits">
+			<h3 class="block-title">наши преимущества</h3>
+			<div class="row">
+				<div class="col-sm-6 col-lg-3">
+					<i class="first-benefit">доступно</i>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<i class="second-benefit">безопасно</i>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<i class="third-benefit">Быстро</i>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<i class="fourth-benefit">удобно</i>
+				</div>
+			</div>
+		</div>
+		<!-- /benefits -->
+		<!-- methods -->
+		<div class="methods-container clearfix">
+			<div class="methods-step-title-container">
+				<div class="methods-step-title-content">
+					<h2>
+						способы погашения долга
+					</h2>
+				</div>
+			</div>
+			<div class="methods-steps-wrap">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 col-lg-3">
+						<!-- block -->
+						<div class="methods-step-block methods-step-1">
+							<div class="methods-step-content methods-step-1">
+								<p>
+									наличными в офисе
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+					<div class="col-xs-6 col-sm-3 col-lg-3">
+						<!-- block -->
+						<div class="methods-step-block methods-step-2">
+							<div class="methods-step-content methods-step-1">
+								<p>
+									банковской картой
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+					<div class="col-xs-6 col-sm-3 col-lg-3">
+						<!-- block -->
+						<div class="methods-step-block methods-step-3">
+							<div class="methods-step-content methods-step-1">
+								<p>
+									платежными системами
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+					<div class="col-xs-6 col-sm-3 col-lg-3">
+						<!-- block -->
+						<div class="methods-step-block methods-step-4">
+							<div class="methods-step-content methods-step-1">
+								<p>
+									банковским переводом
+								</p>
+							</div>
+						</div>
+						<!-- /block -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /methods -->
+		<!-- reviews -->
+		<div class="reviews">
+			<h3 class="block-title">отзывы</h3>
+			<div class="reviews__slider-wrap">
+				<!-- #reviews__slider -->
+				<div id="reviews__slider">
+					<!-- slider block -->
+					<div class="reviews__block">
+						<div class="reviews__header">
+							<img src="assets/img/reviews/face-1.png" alt="face">
+							петрова ирина
+						</div>
+						<div class="reviews__text">
+							На выходе у нас получается как документ с двумя списками: цели клиента и цели проекта. Этот док должен утвердить заказчик или этот документ должен утвердить заказчик
+						</div>
+					</div>
+					<!-- /slider block -->
+					<!-- slider block -->
+					<div class="reviews__block">
+						<div class="reviews__header">
+							<img src="assets/img/reviews/face-2.png" alt="face">
+							петрова ирина
+						</div>
+						<div class="reviews__text">
+							На выходе у нас получается как документ с двумя списками: цели клиента и цели проекта. Этот док должен утвердить заказчик или этот документ должен утвердить заказчик
+						</div>
+					</div>
+					<!-- /slider block -->
+					<!-- slider block -->
+					<div class="reviews__block">
+						<div class="reviews__header">
+							<img src="assets/img/reviews/face-3.png" alt="face">
+							комидаров айсун
+						</div>
+						<div class="reviews__text">
+							На выходе у нас получается как документ с двумя списками: цели клиента и цели проекта. Этот док должен утвердить заказчик или этот документ должен утвердить заказчик
+						</div>
+					</div>
+					<!-- /slider block -->
+					<!-- slider block -->
+					<div class="reviews__block">
+						<div class="reviews__header">
+							<img src="assets/img/reviews/face-1.png" alt="face">
+							петрова ирина
+						</div>
+						<div class="reviews__text">
+							На выходе у нас получается как документ с двумя списками: цели клиента и цели проекта. Этот док должен утвердить заказчик или этот документ должен утвердить заказчик
+						</div>
+					</div>
+					<!-- /slider block -->
+				</div>
+			</div>
+			<!-- /#reviews__slider -->
+		</div>
+		<!-- /reviews -->
 	</main>
 	<!-- /main -->
+	<footer>
+		<div class="footer-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-6 col-lg-4 footer-1-column">
+						<address>
+							<h5>Мы находимся по адресу:</h5>
+							<p>ул. Красных тюленей д. 35, к.1, оф. 4</p>
+							<a href="tel:88005006000">8 (800) 500 60 00</a>
+						</address>
+					</div>
+					<div class="col-sm-6 col-lg-2 footer-2-column">
+						<h4>О компании</h4>
+						<ul>
+							<li>
+								<a href="#">регуляция</a>
+							</li>
+							<li>
+								<a href="#">цель</a>
+							</li>
+							<li>
+								<a href="#">история</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-6 col-lg-4 footer-3-column clearfix">
+						<h4>Займы</h4>
+						<ul>
+							<li>
+								<a href="#">краткосрочные займы для физических лиц</a>
+							</li>
+							<li>
+								<a href="#">займы физическим лицам под залом недвижимости</a>
+							</li>
+							<li>
+								<a href="#">займы физическим лицам под залом автотранспорта</a>
+							</li>
+							<li>
+								<a href="#">займы для индивидуальных предпринимателей</a>
+							</li>
+							<li>
+								<a href="#">займы под инвестиции</a>
+							</li>
+							<li>
+								<a href="#">займы для юридических лиц</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-6 col-lg-2 footer-4-column">
+						<h4>инвесторам</h4>
+						<ul>
+							<li>
+								<a href="#">почему выгодно инвестировать в микрофинансовый сектор?</a>
+							</li>
+							<li>
+								<a href="#">почему нам доверяют?</a>
+							</li>
+							<li>
+								<a href="#">инвестиции - это просто</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-underline clearfix">
+			<p>Все права защищены 2015</p>
+			<p>Лицензия №3469034683406754067</p>
+		</div>
+	</footer>
 	<!-- Scripts - Скрипты -->
 	<!-- JQ 1.11.3 -->
 	<script src="assets/scripts/jquery-1.11.3.min.js"></script>

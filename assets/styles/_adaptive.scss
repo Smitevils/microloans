@@ -103,7 +103,84 @@
 	}
 }
 /* scheme */
+@media screen and (max-width: 1200px) {
+	.scheme-step-title-container {
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+	.scheme-steps-wrap .row {
+		margin-left: 0; margin-right: 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	.scheme-step-block .scheme-step-content:before {
+		top: auto;
+		right: 68px;
+		bottom: 10px;
+		 -moz-transform: rotate(90deg); /* Для Firefox */
+		-ms-transform: rotate(90deg); /* Для IE */
+		-webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+		-o-transform: rotate(90deg); /* Для Opera */
+		transform: rotate(90deg);
+	}
+}
 @media screen and (max-width: 700px) {
 	.scheme-container {margin-left: 0; margin-right: 0;}
+	.scheme-step-title-container:before {display: none;}
 }
-
+/* methods */
+@media screen and (max-width: 1400px) {
+	.methods-step-block.methods-step-1:after, .methods-step-block.methods-step-2:after, .methods-step-block.methods-step-3:after, .methods-step-block.methods-step-4:after {font-size: 140px;}
+	.methods-step-block .methods-step-content {padding-bottom: 18px;}
+}
+@media screen and (max-width: 1200px) {
+	.methods-step-title-container {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+	.methods-step-block {height: 180px;}
+	.methods-step-title-container .methods-step-title-content {padding-top: 0;}
+	.methods-steps-wrap .row {margin-left: 0; margin-right: 0;}
+}
+@media screen and (max-width: 700px) {
+	.methods-container {margin-left: 0; margin-right: 0;}
+}
+/* benefits */
+@media screen and (max-width: 700px) {
+	.benefits {padding-left: 0; margin-right: 0; padding-bottom: 30px;}
+	//
+	h3.block-title {font-size: 30px; padding: 20px 10px;}
+	//
+	.benefits .col-lg-3 {text-align: right; padding-right: 30px;}
+}
+/* reviews */
+@media screen and (max-width: 1200px) {
+	// slider
+	.reviews__block {margin: 0 5px;}
+}
+@media screen and (max-width: 1000px) {
+	#reviews__slider {
+		width: 80%; margin: auto;
+	}
+}
+@media screen and (max-width: 700px) {
+	.reviews {padding-right: 0px; margin-left: 0px;}
+}
+/*** footer ***/
+@media screen and (max-width: 1200px) {
+	footer .footer-3-column ul li {
+		float: none; width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	footer {
+		padding: 0 10px;
+		.footer-underline p {margin: 10px 0;}
+		.footer-underline p:last-child {
+			float: left;
+		}
+	}
+}

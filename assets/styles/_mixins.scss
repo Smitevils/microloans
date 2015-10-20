@@ -10,11 +10,23 @@
 	-ms-justify-content: center;
 	justify-content: center;
 }
+@mixin JustifyLeft {
+	-webkit-justify-content: flex-end;
+	-moz-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;
+}
 @mixin AlignItemsCenter {
 	-webkit-align-items: center;
 	-moz-align-items: center;
 	-ms-align-items: center;
 	align-items: center;
+}
+@mixin AlignItemsBottom {
+	-webkit-align-items: flex-end;
+	-moz-align-items: flex-end;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
 }
 @mixin userSelectNone {
 	-webkit-user-select: none;

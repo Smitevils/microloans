@@ -2044,6 +2044,9 @@ footer {
     width: 46%;
     float: left; }
 
+.calculator__sliders-wrap {
+  background-color: rgba(33, 44, 55, 0); }
+
 /* header */
 @media screen and (max-width: 1600px) {
   .header__calculator-button p {

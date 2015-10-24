@@ -99,10 +99,10 @@
 									<p>Инвестиции</p>
 								</li>
 								<li>
-									<div id="nouislider-1" class="nouislider"></div>
+									<div id="CalcInvestor_1_summ" class="nouislider"></div>
 								</li>
 								<li>
-									<p><span id="nouislider-1-value-1">120 000</span> USD.</p>
+									<p><span id="CalcInvestor_1_summ_value-1">120 000</span> руб.</p>
 								</li>
 							</ul>
 						</div>
@@ -114,10 +114,10 @@
 									<p>период</p>
 								</li>
 								<li>
-									<div id="nouislider-2" class="nouislider"></div>
+									<div id="CalcInvestor_1_time" class="nouislider"></div>
 								</li>
 								<li>
-									<p><span id="nouislider-2-value-1">90</span> дней</p>
+									<p><span id="CalcInvestor_1_time_value-1">1</span> мес</p>
 								</li>
 							</ul>
 						</div>
@@ -134,7 +134,7 @@
 						<ul>
 							<li>
 								<p>ваша прибыль</p>
-								<span>1 560 780<i>USD.</i></span>
+								<span id="CalcInvestor_1_result">1 560 780<i>USD.</i></span>
 							</li>
 							<li>
 								<div class="calculator__result-btn">
@@ -151,7 +151,7 @@
 			</div>
 			<div id="calculator-2" class="header__calculator-block">
 				<div class="calculator-content">
-					<h1>Инвестировать</h1>
+					<h1>Выберите нужную сумму денег</h1>
 					<div class="calculator-first-content__switch-container">
 						<span>физ. лица</span>
 						<span class="calculator_switch" data-switch-pos="1"><i></i></span>
@@ -163,53 +163,171 @@
 						<div class="calculator__tabs-container">
 							<ul>
 								<li>
-									<div class="calculator__tab tab-1 active">
+									<div class="calculator__tab tab-1 active" data-value="1">
 										<p>Краткосрочные займы</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-2">
+									<div class="calculator__tab tab-2" data-value="2">
 										<p>Займы под залог недвиж.</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-3">
+									<div class="calculator__tab tab-3" data-value="3">
 										<p>Займы под залог авто</p>
 									</div>
 								</li>
 							</ul>
 						</div>
 						<!-- /tabs -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>сумма займа</p>
-								</li>
-								<li>
-									<div id="nouislider-3" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="nouislider-3-value-1">120 000</span> руб.</p>
-								</li>
-							</ul>
+						<!-- CalcBorrower 1 -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_1_time_value-1">120 000</span> дн.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrower_1_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>срок займа</p>
-								</li>
-								<li>
-									<div id="nouislider-4" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="nouislider-4-value-1">120 000</span> дней</p>
-								</li>
-							</ul>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_2_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrower_2_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_3_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrower_3_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
 					</div>
 					<!-- /Borrower Calculator - Phisic Faces -->
 					<!-- Borrower Calculator - Legal Faces -->
@@ -218,62 +336,173 @@
 						<div class="calculator__tabs-container">
 							<ul>
 								<li>
-									<div class="calculator__tab tab-1 active">
+									<div class="calculator__tab tab-1 active" data-value="1">
 										<p>Займы под инвестиции</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-2">
+									<div class="calculator__tab tab-2" data-value="2">
 										<p>Займы для предпринимателей</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-3">
+									<div class="calculator__tab tab-3" data-value="3">
 										<p>Займы для юр. лиц</p>
 									</div>
 								</li>
 							</ul>
 						</div>
 						<!-- /tabs -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>сумма займа</p>
-								</li>
-								<li>
-									<div id="nouislider-5" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="nouislider-5-value-1">120 000</span> руб.</p>
-								</li>
-							</ul>
+						<!-- CalcBorrower 2 -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_1_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrowerLegal_1_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>срок займа</p>
-								</li>
-								<li>
-									<div id="nouislider-6" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="nouislider-6-value-1">120 000</span> дней</p>
-								</li>
-							</ul>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_2_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrowerLegal_2_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_3_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>сумма возврата</p>
+										<div id="CalcBorrowerLegal_3_result"></div>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
 					</div>
 					<!-- /Borrower Calculator - Legal Faces -->
-					<!-- result -->
-					<div class="calculator__result">
-						<div class="calculator__result-btn">
-							оформить
-						</div>
-					</div>
-					<!-- /result -->
 				</div>
 			</div>
 			<!-- Calculators Blocks -->

@@ -140,6 +140,8 @@
 		position: relative;
 		width: 100%;
 		height: auto;
+		//
+		&:after {display: none;}
 	}
 	.methods-step-block {height: 180px;}
 	.methods-step-title-container .methods-step-title-content {padding-top: 0;}
@@ -182,5 +184,14 @@
 		.footer-underline p:last-child {
 			float: left;
 		}
+	}
+}
+/*** calculators ***/
+@media screen and (max-width: 1400px) {
+	.header__calculator-block {
+		padding: 4px;
+	}
+	.calculator__result ul li:nth-child(1) span {
+		font-size: 24px;
 	}
 }

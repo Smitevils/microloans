@@ -30,6 +30,9 @@ $(document).ready(function() {
 		$('#calculator-2').css('margin-left', calculator_second_margin);
 	}
 	checkSizeCalculators();
+	$(window).resize(function() {
+		checkSizeCalculators();
+	});
 	//
 	$('#calculator-btn-1').click(function(event) {
 		event.preventDefault();
@@ -61,10 +64,16 @@ $(document).ready(function() {
 			$('#calculator-2 span.calculator_switch').attr('data-switch-pos', '1');
 		}
 	});
-	/* Переключаем табы на первом калькуляторе */
-	$('#calculator-1 .calculator__tab').on('click', function(event) {
+	/* Переключаем табы на первом калькуляторе - физ лица*/
+	$('#calculator-1 .first-calculator__phisic-faces .calculator__tab').on('click', function(event) {
 		event.preventDefault();
-		$('#calculator-1 .calculator__tab').removeClass('active');
+		$('#calculator-1 .first-calculator__phisic-faces .calculator__tab').removeClass('active');
+		$(this).addClass('active');
+	});
+	/* Переключаем табы на первом калькуляторе - юр лица*/
+	$('#calculator-1 .first-calculator__legal-faces .calculator__tab').on('click', function(event) {
+		event.preventDefault();
+		$('#calculator-1 .first-calculator__legal-faces .calculator__tab').removeClass('active');
 		$(this).addClass('active');
 	});
 	/* Переключаем табы на втором калькуляторе - физ лица*/
@@ -101,18 +110,18 @@ $(document).ready(function() {
 	/* создаем переменные - значения слайдеров и результат */
 	var CalcInvestor_1_user_summ = 0; // слайдер суммы
 	var CalcInvestor_1_user_time = 0; // слайдер период займа
-	var CalcInvestor_1_user_percent = 1.75; // слайдер период займа
+	var CalcInvestor_1_user_percent = 7.5; // слайдер период займа
 	var CalcInvestor_1_outcome = 0; // результат
 
 	// Слайд суммы
 	var CalcInvestor_1_summ = document.getElementById('CalcInvestor_1_summ'); // Слайд
 	// Настройки слайда
 	var CalcInvestor_1_summ_Settings = {
-		start: [ 150000 ],
+		start: [ 10000 ],
 		step: 1000,
 		range: {
-			'min': [ 150000 ],
-			'max': [ 10000000 ]
+			'min': [ 10000 ],
+			'max': [ 50000 ]
 		},
 		format: wNumb({
 			decimals: 1,
@@ -147,11 +156,11 @@ $(document).ready(function() {
 	var CalcInvestor_1_time = document.getElementById('CalcInvestor_1_time'); // Слайд
 	// Настройки слайда
 	var CalcInvestor_1_time_Settings = {
-		start: [ 7 ],
+		start: [ 1 ],
 		step: 1,
 		range: {
-			'min': [ 7 ],
-			'max': [ 20 ]
+			'min': [ 1 ],
+			'max': [ 3 ]
 		},
 		format: wNumb({
 			decimals: 1,
@@ -186,6 +195,1121 @@ $(document).ready(function() {
 		$('#CalcInvestor_1_result').html(CalcInvestor_1_outcome + "<i>USD.</i>");
 	}
 	CalcInvestor_1_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestor_2_user_summ = 0; // слайдер суммы
+	var CalcInvestor_2_user_time = 0; // слайдер период займа
+	var CalcInvestor_2_user_percent = 8; // слайдер период займа
+	var CalcInvestor_2_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestor_2_summ = document.getElementById('CalcInvestor_2_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_2_summ_Settings = {
+		start: [ 10000 ],
+		step: 1000,
+		range: {
+			'min': [ 10000 ],
+			'max': [ 3000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestor_2_summ, CalcInvestor_2_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_2_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_2_summ .noUi-handle').append('<span id="CalcInvestor_2_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_2_summ_ValueElement_1 = document.getElementById('CalcInvestor_2_summ_value-1');
+		var CalcInvestor_2_summ_ValueElement_2 = document.getElementById('CalcInvestor_2_summ_value-2');
+
+		CalcInvestor_2_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_2_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_2_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_2_user_summ = parseInt(values[handle]);
+			CalcInvestor_2_result();
+		});
+	}
+
+	handlerstepCalcInvestor_2_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestor_2_time = document.getElementById('CalcInvestor_2_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_2_time_Settings = {
+		start: [ 3 ],
+		step: 1,
+		range: {
+			'min': [ 3 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestor_2_time, CalcInvestor_2_time_Settings); // запускаем слайд
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_2_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_2_time .noUi-handle').append('<span id="CalcInvestor_2_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_2_time_ValueElement_1 = document.getElementById('CalcInvestor_2_time_value-1');
+		var CalcInvestor_2_time_ValueElement_2 = document.getElementById('CalcInvestor_2_time_value-2');
+
+		CalcInvestor_2_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_2_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_2_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_2_user_time = parseInt(values[handle]);
+			CalcInvestor_2_result();
+		});
+	}
+
+	handlerstepCalcInvestor_2_time();
+
+	// Считаем результат
+	function CalcInvestor_2_result() {
+		CalcInvestor_2_outcome = parseInt((((CalcInvestor_2_user_summ / 100)*CalcInvestor_2_user_percent)*CalcInvestor_2_user_time) + CalcInvestor_2_user_summ);
+		$('#CalcInvestor_2_result').html(CalcInvestor_2_outcome + "<i>USD.</i>");
+	}
+	CalcInvestor_2_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestor_3_user_summ = 0; // слайдер суммы
+	var CalcInvestor_3_user_time = 0; // слайдер период займа
+	var CalcInvestor_3_user_percent = 1.75; // слайдер период займа
+	var CalcInvestor_3_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestor_3_summ = document.getElementById('CalcInvestor_3_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_3_summ_Settings = {
+		start: [ 10000 ],
+		step: 1000,
+		range: {
+			'min': [ 10000 ],
+			'max': [ 1000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestor_3_summ, CalcInvestor_3_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_3_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_3_summ .noUi-handle').append('<span id="CalcInvestor_3_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_3_summ_ValueElement_1 = document.getElementById('CalcInvestor_3_summ_value-1');
+		var CalcInvestor_3_summ_ValueElement_2 = document.getElementById('CalcInvestor_3_summ_value-2');
+
+		CalcInvestor_3_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_3_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_3_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_3_user_summ = parseInt(values[handle]);
+			CalcInvestor_3_result();
+		});
+	}
+
+	handlerstepCalcInvestor_3_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestor_3_time = document.getElementById('CalcInvestor_3_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_3_time_Settings = {
+		start: [ 3 ],
+		snap: true,
+		range: {
+			'min': [ 3 ],
+			'50%': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestor_3_time_Settings_2 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestor_3_time_Settings_3 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestor_3_time, CalcInvestor_3_time_Settings); // запускаем слайд
+
+	CalcInvestor_3_summ.noUiSlider.on('update', function( values, handle ) {
+		if (values[handle] <= 100000) {
+			//alert("до 100")
+			CalcInvestor_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_3_time, CalcInvestor_3_time_Settings);
+			handlerstepCalcInvestor_3_time();
+			CalcInvestor_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_3_percent();
+			});
+			CalcInvestor_3_result();
+		} else if (values[handle] > 100000 && values[handle] < 500000) {
+			//alert("до 500")
+			CalcInvestor_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_3_time, CalcInvestor_3_time_Settings_2);
+			handlerstepCalcInvestor_3_time();
+			CalcInvestor_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_3_percent();
+			});
+			CalcInvestor_3_result();
+		} else if (values[handle] > 500000 && values[handle] < 1000000) {
+			//alert("до 1000")
+			CalcInvestor_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_3_time, CalcInvestor_3_time_Settings_3);
+			handlerstepCalcInvestor_3_time();
+			CalcInvestor_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_3_percent();
+			});
+			CalcInvestor_3_result();
+		}
+	});
+
+	function checkCalcInvestor_3_percent() {
+		parseInt(CalcInvestor_3_user_summ);
+		parseInt(CalcInvestor_3_user_time);
+		//alert(CalcInvestor_3_user_summ + " " + CalcInvestor_3_user_time)
+		if (CalcInvestor_3_user_summ >= 10000 && CalcInvestor_3_user_summ <= 100000 && CalcInvestor_3_user_time == 3) {
+			CalcInvestor_3_user_percent = 5.5;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 10000 && CalcInvestor_3_user_summ <= 100000 && CalcInvestor_3_user_time == 6) {
+			CalcInvestor_3_user_percent = 6;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 10000 && CalcInvestor_3_user_summ <= 100000 && CalcInvestor_3_user_time == 12) {
+			CalcInvestor_3_user_percent = 6.5;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 100000 && CalcInvestor_3_user_summ <= 500000 && CalcInvestor_3_user_time == 6) {
+			CalcInvestor_3_user_percent = 6.5;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 100000 && CalcInvestor_3_user_summ <= 500000 && CalcInvestor_3_user_time == 9) {
+			CalcInvestor_3_user_percent = 7;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 100000 && CalcInvestor_3_user_summ <= 500000 && CalcInvestor_3_user_time == 12) {
+			CalcInvestor_3_user_percent = 7.5;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 500000 && CalcInvestor_3_user_summ <= 1000000 && CalcInvestor_3_user_time == 6) {
+			CalcInvestor_3_user_percent = 7;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 500000 && CalcInvestor_3_user_summ <= 1000000 && CalcInvestor_3_user_time == 9) {
+			CalcInvestor_3_user_percent = 7.5;
+			//alert(CalcInvestor_3_user_percent)
+		} else if (CalcInvestor_3_user_summ >= 500000 && CalcInvestor_3_user_summ <= 1000000 && CalcInvestor_3_user_time == 12) {
+			CalcInvestor_3_user_percent = 8;
+			//alert(CalcInvestor_3_user_percent)
+		}
+	}
+
+	CalcInvestor_3_summ.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestor_3_percent();
+	});
+	CalcInvestor_3_time.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestor_3_percent();
+	});
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_3_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_3_time .noUi-handle').append('<span id="CalcInvestor_3_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_3_time_ValueElement_1 = document.getElementById('CalcInvestor_3_time_value-1');
+		var CalcInvestor_3_time_ValueElement_2 = document.getElementById('CalcInvestor_3_time_value-2');
+
+		CalcInvestor_3_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_3_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_3_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_3_user_time = parseInt(values[handle]);
+			CalcInvestor_3_result();
+		});
+	}
+
+	handlerstepCalcInvestor_3_time();
+
+	// Считаем результат
+	function CalcInvestor_3_result() {
+		CalcInvestor_3_outcome = parseInt((((CalcInvestor_3_user_summ / 100)*CalcInvestor_3_user_percent)*CalcInvestor_3_user_time) + CalcInvestor_3_user_summ);
+		$('#CalcInvestor_3_result').html(CalcInvestor_3_outcome + "<i>USD.</i>");
+	}
+	CalcInvestor_3_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestor_4_user_summ = 0; // слайдер суммы
+	var CalcInvestor_4_user_time = 0; // слайдер период займа
+	var CalcInvestor_4_user_percent = 1.75; // слайдер период займа
+	var CalcInvestor_4_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestor_4_summ = document.getElementById('CalcInvestor_4_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_4_summ_Settings = {
+		start: [ 150000 ],
+		step: 10000,
+		range: {
+			'min': [ 150000 ],
+			'max': [ 10000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestor_4_summ, CalcInvestor_4_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_4_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_4_summ .noUi-handle').append('<span id="CalcInvestor_4_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_4_summ_ValueElement_1 = document.getElementById('CalcInvestor_4_summ_value-1');
+		var CalcInvestor_4_summ_ValueElement_2 = document.getElementById('CalcInvestor_4_summ_value-2');
+
+		CalcInvestor_4_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_4_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_4_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_4_user_summ = parseInt(values[handle]);
+			CalcInvestor_4_result();
+		});
+	}
+
+	handlerstepCalcInvestor_4_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestor_4_time = document.getElementById('CalcInvestor_4_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestor_4_time_Settings = {
+		start: [ 3 ],
+		snap: true,
+		range: {
+			'min': [ 3 ],
+			'50%': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestor_4_time_Settings_2 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestor_4_time_Settings_4 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestor_4_time, CalcInvestor_4_time_Settings); // запускаем слайд
+
+	CalcInvestor_4_summ.noUiSlider.on('update', function( values, handle ) {
+		if (values[handle] <= 100000) {
+			//alert("до 100")
+			CalcInvestor_4_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_4_time, CalcInvestor_4_time_Settings);
+			handlerstepCalcInvestor_4_time();
+			CalcInvestor_4_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_4_percent();
+			});
+			CalcInvestor_4_result();
+		} else if (values[handle] > 100000 && values[handle] < 500000) {
+			//alert("до 500")
+			CalcInvestor_4_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_4_time, CalcInvestor_4_time_Settings_2);
+			handlerstepCalcInvestor_4_time();
+			CalcInvestor_4_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_4_percent();
+			});
+			CalcInvestor_4_result();
+		} else if (values[handle] > 500000 && values[handle] < 1000000) {
+			//alert("до 1000")
+			CalcInvestor_4_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestor_4_time, CalcInvestor_4_time_Settings_4);
+			handlerstepCalcInvestor_4_time();
+			CalcInvestor_4_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestor_4_percent();
+			});
+			CalcInvestor_4_result();
+		}
+	});
+
+	function checkCalcInvestor_4_percent() {
+		parseInt(CalcInvestor_4_user_summ);
+		parseInt(CalcInvestor_4_user_time);
+		//alert(CalcInvestor_4_user_summ + " " + CalcInvestor_4_user_time)
+		if (CalcInvestor_4_user_summ >= 150000 && CalcInvestor_4_user_summ <= 500000 && CalcInvestor_4_user_time == 3) {
+			CalcInvestor_4_user_percent = 7;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 150000 && CalcInvestor_4_user_summ <= 500000 && CalcInvestor_4_user_time == 6) {
+			CalcInvestor_4_user_percent = 7.5;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 150000 && CalcInvestor_4_user_summ <= 500000 && CalcInvestor_4_user_time == 12) {
+			CalcInvestor_4_user_percent = 8;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 500000 && CalcInvestor_4_user_summ <= 15000000 && CalcInvestor_4_user_time == 6) {
+			CalcInvestor_4_user_percent = 7.5;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 500000 && CalcInvestor_4_user_summ <= 15000000 && CalcInvestor_4_user_time == 9) {
+			CalcInvestor_4_user_percent = 8;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 500000 && CalcInvestor_4_user_summ <= 15000000 && CalcInvestor_4_user_time == 12) {
+			CalcInvestor_4_user_percent = 8.5;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 15000000 && CalcInvestor_4_user_summ <= 10000000 && CalcInvestor_4_user_time == 6) {
+			CalcInvestor_4_user_percent = 8;
+			//alert(CalcInvestor_4_user_percent)
+		} else if (CalcInvestor_4_user_summ >= 15000000 && CalcInvestor_4_user_summ <= 10000000 && CalcInvestor_4_user_time == 12) {
+			CalcInvestor_4_user_percent = 8.5;
+			//alert(CalcInvestor_4_user_percent)
+		}
+	}
+
+	CalcInvestor_4_summ.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestor_4_percent();
+	});
+	CalcInvestor_4_time.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestor_4_percent();
+	});
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestor_4_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestor_4_time .noUi-handle').append('<span id="CalcInvestor_4_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestor_4_time_ValueElement_1 = document.getElementById('CalcInvestor_4_time_value-1');
+		var CalcInvestor_4_time_ValueElement_2 = document.getElementById('CalcInvestor_4_time_value-2');
+
+		CalcInvestor_4_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestor_4_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestor_4_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestor_4_user_time = parseInt(values[handle]);
+			CalcInvestor_4_result();
+		});
+	}
+
+	handlerstepCalcInvestor_4_time();
+
+	// Считаем результат
+	function CalcInvestor_4_result() {
+		CalcInvestor_4_outcome = parseInt((((CalcInvestor_4_user_summ / 100)*CalcInvestor_4_user_percent)*CalcInvestor_4_user_time) + CalcInvestor_4_user_summ);
+		$('#CalcInvestor_4_result').html(CalcInvestor_4_outcome + "<i>USD.</i>");
+	}
+	CalcInvestor_4_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestorLegal_1_user_summ = 0; // слайдер суммы
+	var CalcInvestorLegal_1_user_time = 0; // слайдер период займа
+	var CalcInvestorLegal_1_user_percent = 8; // слайдер период займа
+	var CalcInvestorLegal_1_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestorLegal_1_summ = document.getElementById('CalcInvestorLegal_1_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_1_summ_Settings = {
+		start: [ 10000 ],
+		step: 1000,
+		range: {
+			'min': [ 10000 ],
+			'max': [ 3000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestorLegal_1_summ, CalcInvestorLegal_1_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_1_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_1_summ .noUi-handle').append('<span id="CalcInvestorLegal_1_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_1_summ_ValueElement_1 = document.getElementById('CalcInvestorLegal_1_summ_value-1');
+		var CalcInvestorLegal_1_summ_ValueElement_2 = document.getElementById('CalcInvestorLegal_1_summ_value-2');
+
+		CalcInvestorLegal_1_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_1_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_1_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_1_user_summ = parseInt(values[handle]);
+			CalcInvestorLegal_1_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_1_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestorLegal_1_time = document.getElementById('CalcInvestorLegal_1_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_1_time_Settings = {
+		start: [ 3 ],
+		step: 1,
+		range: {
+			'min': [ 3 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestorLegal_1_time, CalcInvestorLegal_1_time_Settings); // запускаем слайд
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_1_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_1_time .noUi-handle').append('<span id="CalcInvestorLegal_1_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_1_time_ValueElement_1 = document.getElementById('CalcInvestorLegal_1_time_value-1');
+		var CalcInvestorLegal_1_time_ValueElement_2 = document.getElementById('CalcInvestorLegal_1_time_value-2');
+
+		CalcInvestorLegal_1_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_1_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_1_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_1_user_time = parseInt(values[handle]);
+			CalcInvestorLegal_1_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_1_time();
+
+	// Считаем результат
+	function CalcInvestorLegal_1_result() {
+		CalcInvestorLegal_1_outcome = parseInt((((CalcInvestorLegal_1_user_summ / 100)*CalcInvestorLegal_1_user_percent)*CalcInvestorLegal_1_user_time) + CalcInvestorLegal_1_user_summ);
+		$('#CalcInvestorLegal_1_result').html(CalcInvestorLegal_1_outcome + "<i>USD.</i>");
+	}
+	CalcInvestorLegal_1_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestorLegal_2_user_summ = 0; // слайдер суммы
+	var CalcInvestorLegal_2_user_time = 0; // слайдер период займа
+	var CalcInvestorLegal_2_user_percent = 1.75; // слайдер период займа
+	var CalcInvestorLegal_2_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestorLegal_2_summ = document.getElementById('CalcInvestorLegal_2_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_2_summ_Settings = {
+		start: [ 10000 ],
+		step: 1000,
+		range: {
+			'min': [ 10000 ],
+			'max': [ 1000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestorLegal_2_summ, CalcInvestorLegal_2_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_2_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_2_summ .noUi-handle').append('<span id="CalcInvestorLegal_2_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_2_summ_ValueElement_1 = document.getElementById('CalcInvestorLegal_2_summ_value-1');
+		var CalcInvestorLegal_2_summ_ValueElement_2 = document.getElementById('CalcInvestorLegal_2_summ_value-2');
+
+		CalcInvestorLegal_2_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_2_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_2_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_2_user_summ = parseInt(values[handle]);
+			CalcInvestorLegal_2_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_2_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestorLegal_2_time = document.getElementById('CalcInvestorLegal_2_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_2_time_Settings = {
+		start: [ 3 ],
+		snap: true,
+		range: {
+			'min': [ 3 ],
+			'50%': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestorLegal_2_time_Settings_2 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestorLegal_2_time_Settings_3 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestorLegal_2_time, CalcInvestorLegal_2_time_Settings); // запускаем слайд
+
+	CalcInvestorLegal_2_summ.noUiSlider.on('update', function( values, handle ) {
+		if (values[handle] <= 100000) {
+			//alert("до 100")
+			CalcInvestorLegal_2_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_2_time, CalcInvestorLegal_2_time_Settings);
+			handlerstepCalcInvestorLegal_2_time();
+			CalcInvestorLegal_2_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_2_percent();
+			});
+			CalcInvestorLegal_2_result();
+		} else if (values[handle] > 100000 && values[handle] < 500000) {
+			//alert("до 500")
+			CalcInvestorLegal_2_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_2_time, CalcInvestorLegal_2_time_Settings_2);
+			handlerstepCalcInvestorLegal_2_time();
+			CalcInvestorLegal_2_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_2_percent();
+			});
+			CalcInvestorLegal_2_result();
+		} else if (values[handle] > 500000 && values[handle] < 1000000) {
+			//alert("до 1000")
+			CalcInvestorLegal_2_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_2_time, CalcInvestorLegal_2_time_Settings_3);
+			handlerstepCalcInvestorLegal_2_time();
+			CalcInvestorLegal_2_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_2_percent();
+			});
+			CalcInvestorLegal_2_result();
+		}
+	});
+
+	function checkCalcInvestorLegal_2_percent() {
+		parseInt(CalcInvestorLegal_2_user_summ);
+		parseInt(CalcInvestorLegal_2_user_time);
+		//alert(CalcInvestorLegal_2_user_summ + " " + CalcInvestorLegal_2_user_time)
+		if (CalcInvestorLegal_2_user_summ >= 10000 && CalcInvestorLegal_2_user_summ <= 100000 && CalcInvestorLegal_2_user_time == 3) {
+			CalcInvestorLegal_2_user_percent = 5.5;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 10000 && CalcInvestorLegal_2_user_summ <= 100000 && CalcInvestorLegal_2_user_time == 6) {
+			CalcInvestorLegal_2_user_percent = 6;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 10000 && CalcInvestorLegal_2_user_summ <= 100000 && CalcInvestorLegal_2_user_time == 12) {
+			CalcInvestorLegal_2_user_percent = 6.5;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 100000 && CalcInvestorLegal_2_user_summ <= 500000 && CalcInvestorLegal_2_user_time == 6) {
+			CalcInvestorLegal_2_user_percent = 6.5;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 100000 && CalcInvestorLegal_2_user_summ <= 500000 && CalcInvestorLegal_2_user_time == 9) {
+			CalcInvestorLegal_2_user_percent = 7;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 100000 && CalcInvestorLegal_2_user_summ <= 500000 && CalcInvestorLegal_2_user_time == 12) {
+			CalcInvestorLegal_2_user_percent = 7.5;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 500000 && CalcInvestorLegal_2_user_summ <= 1000000 && CalcInvestorLegal_2_user_time == 6) {
+			CalcInvestorLegal_2_user_percent = 7;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 500000 && CalcInvestorLegal_2_user_summ <= 1000000 && CalcInvestorLegal_2_user_time == 9) {
+			CalcInvestorLegal_2_user_percent = 7.5;
+			//alert(CalcInvestorLegal_2_user_percent)
+		} else if (CalcInvestorLegal_2_user_summ >= 500000 && CalcInvestorLegal_2_user_summ <= 1000000 && CalcInvestorLegal_2_user_time == 12) {
+			CalcInvestorLegal_2_user_percent = 8;
+			//alert(CalcInvestorLegal_2_user_percent)
+		}
+	}
+
+	CalcInvestorLegal_2_summ.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestorLegal_2_percent();
+	});
+	CalcInvestorLegal_2_time.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestorLegal_2_percent();
+	});
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_2_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_2_time .noUi-handle').append('<span id="CalcInvestorLegal_2_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_2_time_ValueElement_1 = document.getElementById('CalcInvestorLegal_2_time_value-1');
+		var CalcInvestorLegal_2_time_ValueElement_2 = document.getElementById('CalcInvestorLegal_2_time_value-2');
+
+		CalcInvestorLegal_2_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_2_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_2_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_2_user_time = parseInt(values[handle]);
+			CalcInvestorLegal_2_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_2_time();
+
+	// Считаем результат
+	function CalcInvestorLegal_2_result() {
+		CalcInvestorLegal_2_outcome = parseInt((((CalcInvestorLegal_2_user_summ / 100)*CalcInvestorLegal_2_user_percent)*CalcInvestorLegal_2_user_time) + CalcInvestorLegal_2_user_summ);
+		$('#CalcInvestorLegal_2_result').html(CalcInvestorLegal_2_outcome + "<i>USD.</i>");
+	}
+	CalcInvestorLegal_2_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+	/* Калькулятор заемщика - Краткосрочные займы */
+
+	/* создаем переменные - значения слайдеров и результат */
+	var CalcInvestorLegal_3_user_summ = 0; // слайдер суммы
+	var CalcInvestorLegal_3_user_time = 0; // слайдер период займа
+	var CalcInvestorLegal_3_user_percent = 1.75; // слайдер период займа
+	var CalcInvestorLegal_3_outcome = 0; // результат
+
+	// Слайд суммы
+	var CalcInvestorLegal_3_summ = document.getElementById('CalcInvestorLegal_3_summ'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_3_summ_Settings = {
+		start: [ 150000 ],
+		step: 10000,
+		range: {
+			'min': [ 150000 ],
+			'max': [ 10000000 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+	
+	noUiSlider.create(CalcInvestorLegal_3_summ, CalcInvestorLegal_3_summ_Settings); // запускаем слайд
+	
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_3_summ() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_3_summ .noUi-handle').append('<span id="CalcInvestorLegal_3_summ_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_3_summ_ValueElement_1 = document.getElementById('CalcInvestorLegal_3_summ_value-1');
+		var CalcInvestorLegal_3_summ_ValueElement_2 = document.getElementById('CalcInvestorLegal_3_summ_value-2');
+
+		CalcInvestorLegal_3_summ.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_3_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_3_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_3_user_summ = parseInt(values[handle]);
+			CalcInvestorLegal_3_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_3_summ();
+	
+	/********************************/
+	
+	// слайд периода займа
+	var CalcInvestorLegal_3_time = document.getElementById('CalcInvestorLegal_3_time'); // Слайд
+	// Настройки слайда
+	var CalcInvestorLegal_3_time_Settings = {
+		start: [ 3 ],
+		snap: true,
+		range: {
+			'min': [ 3 ],
+			'50%': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestorLegal_3_time_Settings_2 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'50%': [ 9 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	var CalcInvestorLegal_3_time_Settings_4 = {
+		start: [ 6 ],
+		snap: true,
+		range: {
+			'min': [ 6 ],
+			'max': [ 12 ]
+		},
+		format: wNumb({
+			decimals: 1,
+			thousand: '',
+			postfix: '',
+		})
+	}
+
+	noUiSlider.create(CalcInvestorLegal_3_time, CalcInvestorLegal_3_time_Settings); // запускаем слайд
+
+	CalcInvestorLegal_3_summ.noUiSlider.on('update', function( values, handle ) {
+		if (values[handle] <= 100000) {
+			//alert("до 100")
+			CalcInvestorLegal_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_3_time, CalcInvestorLegal_3_time_Settings);
+			handlerstepCalcInvestorLegal_3_time();
+			CalcInvestorLegal_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_3_percent();
+			});
+			CalcInvestorLegal_3_result();
+		} else if (values[handle] > 100000 && values[handle] < 500000) {
+			//alert("до 500")
+			CalcInvestorLegal_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_3_time, CalcInvestorLegal_3_time_Settings_2);
+			handlerstepCalcInvestorLegal_3_time();
+			CalcInvestorLegal_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_3_percent();
+			});
+			CalcInvestorLegal_3_result();
+		} else if (values[handle] > 500000 && values[handle] < 1000000) {
+			//alert("до 1000")
+			CalcInvestorLegal_3_time.noUiSlider.destroy();
+			noUiSlider.create(CalcInvestorLegal_3_time, CalcInvestorLegal_3_time_Settings_4);
+			handlerstepCalcInvestorLegal_3_time();
+			CalcInvestorLegal_3_time.noUiSlider.on('update', function( values, handle ) {
+				checkCalcInvestorLegal_3_percent();
+			});
+			CalcInvestorLegal_3_result();
+		}
+	});
+
+	function checkCalcInvestorLegal_3_percent() {
+		parseInt(CalcInvestorLegal_3_user_summ);
+		parseInt(CalcInvestorLegal_3_user_time);
+		//alert(CalcInvestorLegal_3_user_summ + " " + CalcInvestorLegal_3_user_time)
+		if (CalcInvestorLegal_3_user_summ >= 150000 && CalcInvestorLegal_3_user_summ <= 500000 && CalcInvestorLegal_3_user_time == 3) {
+			CalcInvestorLegal_3_user_percent = 7;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 150000 && CalcInvestorLegal_3_user_summ <= 500000 && CalcInvestorLegal_3_user_time == 6) {
+			CalcInvestorLegal_3_user_percent = 7.5;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 150000 && CalcInvestorLegal_3_user_summ <= 500000 && CalcInvestorLegal_3_user_time == 12) {
+			CalcInvestorLegal_3_user_percent = 8;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 500000 && CalcInvestorLegal_3_user_summ <= 15000000 && CalcInvestorLegal_3_user_time == 6) {
+			CalcInvestorLegal_3_user_percent = 7.5;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 500000 && CalcInvestorLegal_3_user_summ <= 15000000 && CalcInvestorLegal_3_user_time == 9) {
+			CalcInvestorLegal_3_user_percent = 8;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 500000 && CalcInvestorLegal_3_user_summ <= 15000000 && CalcInvestorLegal_3_user_time == 12) {
+			CalcInvestorLegal_3_user_percent = 8.5;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 15000000 && CalcInvestorLegal_3_user_summ <= 10000000 && CalcInvestorLegal_3_user_time == 6) {
+			CalcInvestorLegal_3_user_percent = 8;
+			//alert(CalcInvestorLegal_3_user_percent)
+		} else if (CalcInvestorLegal_3_user_summ >= 15000000 && CalcInvestorLegal_3_user_summ <= 10000000 && CalcInvestorLegal_3_user_time == 12) {
+			CalcInvestorLegal_3_user_percent = 8.5;
+			//alert(CalcInvestorLegal_3_user_percent)
+		}
+	}
+
+	CalcInvestorLegal_3_summ.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestorLegal_3_percent();
+	});
+	CalcInvestorLegal_3_time.noUiSlider.on('update', function( values, handle ) {
+		checkCalcInvestorLegal_3_percent();
+	});
+
+	// функция выдает значения на лейблы
+	function handlerstepCalcInvestorLegal_3_time() {
+		// добавляем к точке лейбл
+		$('#CalcInvestorLegal_3_time .noUi-handle').append('<span id="CalcInvestorLegal_3_time_value-2" class="nouislider-under-value"></span>');
+		// получаем в переменные лейблы
+		var CalcInvestorLegal_3_time_ValueElement_1 = document.getElementById('CalcInvestorLegal_3_time_value-1');
+		var CalcInvestorLegal_3_time_ValueElement_2 = document.getElementById('CalcInvestorLegal_3_time_value-2');
+
+		CalcInvestorLegal_3_time.noUiSlider.on('update', function( values, handle ) {
+			CalcInvestorLegal_3_time_ValueElement_1.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_3_time_ValueElement_2.innerHTML = parseInt(values[handle]);
+			CalcInvestorLegal_3_user_time = parseInt(values[handle]);
+			CalcInvestorLegal_3_result();
+		});
+	}
+
+	handlerstepCalcInvestorLegal_3_time();
+
+	// Считаем результат
+	function CalcInvestorLegal_3_result() {
+		CalcInvestorLegal_3_outcome = parseInt((((CalcInvestorLegal_3_user_summ / 100)*CalcInvestorLegal_3_user_percent)*CalcInvestorLegal_3_user_time) + CalcInvestorLegal_3_user_summ);
+		$('#CalcInvestorLegal_3_result').html(CalcInvestorLegal_3_outcome + "<i>USD.</i>");
+	}
+	CalcInvestorLegal_3_result();
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**********************************************************************************************/
 /**********************************************************************************************/
@@ -845,7 +1969,15 @@ $(document).ready(function() {
 	/**/
 	/* Открываем слайдеры физ лиц или юр лиц на вкладке заемщика */
 	/* switch */
-	
+	$('#calculator-1 span.calculator_switch[data-switch-pos]').find('i').click(function() {
+		if ($('#calculator-1 span.calculator_switch').attr('data-switch-pos') == 1) {
+			$('.first-calculator__legal-faces').hide();
+			$('.first-calculator__phisic-faces').show();
+		} else if ($('#calculator-1 span.calculator_switch').attr('data-switch-pos') == 2) {
+			$('.first-calculator__phisic-faces').hide();
+			$('.first-calculator__legal-faces').show();
+		}
+	});
 
 	$('#calculator-2 span.calculator_switch[data-switch-pos]').find('i').click(function() {
 		if ($('#calculator-2 span.calculator_switch').attr('data-switch-pos') == 1) {
@@ -869,10 +2001,18 @@ $(document).ready(function() {
 		autoplay: true,
 		autoplaySpeed: 5000
 	});
-	if ($('div').is('.slide')) {
-		var h = $('.slide').height();
-		$('.header__calculator-block').css('height', h);
+	
+	function checkCalculatorHeightFromSlide() {
+		if ($('div').is('.slide')) {
+			var h = $('.slide').height();
+			$('.header__calculator-block').css('height', h);
+		}
 	}
+	checkCalculatorHeightFromSlide();
+	$(window).resize(function(event) {
+		checkCalculatorHeightFromSlide();
+	});
+
 	$('.slider-nav-btn-left').click(function() {
 		$('#slider-fade').slick('slickPrev');
 	});
@@ -920,6 +2060,25 @@ $(document).ready(function() {
 		]
 	});
 	/* /Slick Slider - Reviews */
+	/* проверка вкладок - открываем/скрываем калькуляторы */
+	function checkInvestPhisicCalc() {
+		$('.first-calculator__phisic-faces .calculator__sliders-wrap').hide(); // сначала все прячем
+		var x = $('.first-calculator__phisic-faces').find('.calculator__tab.active').attr('data-value');
+		$('.first-calculator__phisic-faces').find('.calculator__sliders-wrap[data-calc-wrap='+x+']').show();
+	}
+	checkInvestPhisicCalc();
+	$('.first-calculator__phisic-faces').find('.calculator__tab').click(function() {
+		checkInvestPhisicCalc();
+	});
+	function checkInvestLegalCalc() {
+		$('.first-calculator__legal-faces .calculator__sliders-wrap').hide(); // сначала все прячем
+		var x = $('.first-calculator__legal-faces').find('.calculator__tab.active').attr('data-value');
+		$('.first-calculator__legal-faces').find('.calculator__sliders-wrap[data-calc-wrap='+x+']').show();
+	}
+	checkInvestLegalCalc();
+	$('.first-calculator__legal-faces').find('.calculator__tab').click(function() {
+		checkInvestLegalCalc();
+	});
 	// 
 	/* проверка вкладок - открываем/скрываем калькуляторы */
 	function checkBorrowerPhisicCalc() {

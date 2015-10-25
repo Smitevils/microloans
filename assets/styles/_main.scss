@@ -37,7 +37,7 @@ header {
 				@include MyriadProBold;
 				color: $f-1;
 				font-size: 12px;
-				font-weight: 700;
+				font-weight: 100;
 				text-transform: uppercase;
 				text-decoration: none;
 				//
@@ -65,7 +65,7 @@ header {
 	//
 	p {
 		@include MyriadProBold;
-		font-weight: 800;
+		font-weight: 100;
 		color: $f-2;
 		font-size: 14px; margin: 0; padding: 0 20%;
 	}
@@ -470,12 +470,13 @@ span.calculator_switch {
 	border-radius: 26px;
 	cursor: pointer;
 	text-transform: uppercase;
+	font-weight: lighter;
 }
 
 /* calculator faces block */
 
 .first-calculator__phisic-faces {padding: 0 20px;}
-.first-calculator__legal-faces {padding: 0 20px;}
+.first-calculator__legal-faces {padding: 0 20px; display: none;}
 
 /**/
 
@@ -549,7 +550,7 @@ span.calculator_switch {
 		color: $f-4;
 		vertical-align: middle;
 		text-decoration: none;
-		font-weight: 700;
+		font-weight: 100;
 		&:hover {text-decoration: none;}
 		&:before {
 			@include transition-03s;
@@ -628,7 +629,7 @@ main {
 		text-align: center;
 		@include MyriadProBold;
 		font-size: 12px;
-		font-weight: 800;
+		font-weight: 100;
 		text-transform: uppercase;
 		color: $f-10;
 		//
@@ -638,6 +639,24 @@ main {
 			width: 100%; height: 24px;
 			background: url(../img/icons/phone.png) no-repeat center;
 		}
+	}
+	//
+	&:hover p:before {
+		animation: animationFrames linear 1s;
+		animation-iteration-count: 1;
+		transform-origin: 50% 50%;
+		-webkit-animation: animationFrames linear 1s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-transform-origin: 50% 50%;
+		-moz-animation: animationFrames linear 1s;
+		-moz-animation-iteration-count: 1;
+		-moz-transform-origin: 50% 50%;
+		-o-animation: animationFrames linear 1s;
+		-o-animation-iteration-count: 1;
+		-o-transform-origin: 50% 50%;
+		-ms-animation: animationFrames linear 1s;
+		-ms-animation-iteration-count: 1;
+		-ms-transform-origin: 50% 50%;
 	}
 }
 
@@ -862,6 +881,18 @@ main {
 	width: 286px;
 	height: 262px;
 	padding: 44px; //coins-ghost.png
+	//
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 113px; right: -10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 18px 0 18px 10px;
+		border-color: transparent transparent transparent #3b3d47
+	}
 	//
 	.methods-step-title-content {
 		position: relative;
@@ -1164,18 +1195,19 @@ footer {
 		}
 	}
 	.footer-1-column {
-		h5 {@include MyriadProBold; font-size: 16px; color: $f-14; margin: 15px 0;}
+		h5 {@include MyriadProBold; font-size: 16px; color: $f-14; margin: 15px 0; font-weight: 100;}
 		p {@include MyriadProRegular; font-size: 18px; color: $f-14;}
 		a {
 			@include MyriadProBold; font-size: 18px;
 			color: $f-15;
+			font-weight: 100;
 			//
 			&:hover {text-decoration: none;}
 		}
 	}
 	.footer-2-column, .footer-3-column, .footer-4-column {
 		h4 {
-			@include MyriadProBold; font-size: 18px;
+			@include MyriadProBold; font-size: 18px; font-weight: 100;
 			text-transform: uppercase;
 			color: $f-14;
 			margin: 15px 0;

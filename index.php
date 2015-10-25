@@ -70,83 +70,419 @@
 						<div class="calculator__tabs-container">
 							<ul>
 								<li>
-									<div class="calculator__tab tab-1 active">
-										<p>Потребительский</p>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Ознакомительный</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-2">
-										<p>Ипотека</p>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Моя цель</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-3">
-										<p>Автокредит</p>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Ежемесячный доход</p>
 									</div>
 								</li>
 								<li>
-									<div class="calculator__tab tab-4">
-										<p>Другое</p>
+									<div class="calculator__tab tab-4" data-value="4">
+										<p>Максимальный процент</p>
 									</div>
 								</li>
 							</ul>
 						</div>
 						<!-- /tabs -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>Инвестиции</p>
-								</li>
-								<li>
-									<div id="CalcInvestor_1_summ" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="CalcInvestor_1_summ_value-1">120 000</span> руб.</p>
-								</li>
-							</ul>
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_1_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestor_1_result">1 560 780<i>USD.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
-						<!-- slider -->
-						<div class="calculator__slider-container">
-							<ul>
-								<li>
-									<p>период</p>
-								</li>
-								<li>
-									<div id="CalcInvestor_1_time" class="nouislider"></div>
-								</li>
-								<li>
-									<p><span id="CalcInvestor_1_time_value-1">1</span> мес</p>
-								</li>
-							</ul>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_2_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestor_2_result">1 560 780<i>USD.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
 						</div>
-						<!-- /slider -->
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_3_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestor_3_result">1 560 780<i>USD.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="4">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_4_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_4_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_4_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_4_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestor_4_result">1 560 780<i>USD.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
 					</div>
 					<!-- /First Calculator - Phisic Faces -->
 					<!-- First Calculator - Legal Faces -->
 					<div class="first-calculator__legal-faces">
-						
+						<!-- tabs -->
+						<div class="calculator__tabs-container">
+							<ul>
+								<li>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Моя цель</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Ежемесячный доход</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Максимальный процент</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- /tabs -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_1_summ_value-1">#1</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_1_time_value-1">#1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestorLegal_1_result">#1<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_2_summ_value-1">#2</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_2_time_value-1">#2</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestorLegal_2_result">#2<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_3_summ_value-1">#3</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_3_time_value-1">#3</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>ваша прибыль</p>
+										<span id="CalcInvestorLegal_3_result">#3<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Инвестировать
+										</div>
+									</li>
+									<li>
+										<a href="#">подробнее</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
 					</div>
 					<!-- /First Calculator - Legal Faces -->
-					<!-- result -->
-					<div class="calculator__result">
-						<ul>
-							<li>
-								<p>ваша прибыль</p>
-								<span id="CalcInvestor_1_result">1 560 780<i>USD.</i></span>
-							</li>
-							<li>
-								<div class="calculator__result-btn">
-									Инвестировать
-								</div>
-							</li>
-							<li>
-								<a href="#">подробнее</a>
-							</li>
-						</ul>
-					</div>
-					<!-- /result -->
 				</div>
 			</div>
 			<div id="calculator-2" class="header__calculator-block">

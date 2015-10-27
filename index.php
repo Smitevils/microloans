@@ -129,7 +129,7 @@
 								<ul>
 									<li>
 										<p>ваша прибыль</p>
-										<span id="CalcInvestor_1_result">1 560 780<i>USD.</i></span>
+										<span id="CalcInvestor_1_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
 										<div class="calculator__result-btn">
@@ -181,7 +181,7 @@
 								<ul>
 									<li>
 										<p>ваша прибыль</p>
-										<span id="CalcInvestor_2_result">1 560 780<i>USD.</i></span>
+										<span id="CalcInvestor_2_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
 										<div class="calculator__result-btn">
@@ -233,7 +233,7 @@
 								<ul>
 									<li>
 										<p>ваша прибыль</p>
-										<span id="CalcInvestor_3_result">1 560 780<i>USD.</i></span>
+										<span id="CalcInvestor_3_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
 										<div class="calculator__result-btn">
@@ -285,7 +285,7 @@
 								<ul>
 									<li>
 										<p>ваша прибыль</p>
-										<span id="CalcInvestor_4_result">1 560 780<i>USD.</i></span>
+										<span id="CalcInvestor_4_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
 										<div class="calculator__result-btn">

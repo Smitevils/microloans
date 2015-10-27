@@ -192,7 +192,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestor_1_result() {
 		CalcInvestor_1_outcome = parseInt((((CalcInvestor_1_user_summ / 100)*CalcInvestor_1_user_percent)*CalcInvestor_1_user_time) + CalcInvestor_1_user_summ);
-		$('#CalcInvestor_1_result').html(CalcInvestor_1_outcome + "<i>USD.</i>");
+		$('#CalcInvestor_1_result').html(CalcInvestor_1_outcome + "<i>руб.</i>");
 	}
 	CalcInvestor_1_result();
 
@@ -296,7 +296,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestor_2_result() {
 		CalcInvestor_2_outcome = parseInt((((CalcInvestor_2_user_summ / 100)*CalcInvestor_2_user_percent)*CalcInvestor_2_user_time) + CalcInvestor_2_user_summ);
-		$('#CalcInvestor_2_result').html(CalcInvestor_2_outcome + "<i>USD.</i>");
+		$('#CalcInvestor_2_result').html(CalcInvestor_2_outcome + "<i>руб.</i>");
 	}
 	CalcInvestor_2_result();
 
@@ -504,7 +504,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestor_3_result() {
 		CalcInvestor_3_outcome = parseInt((((CalcInvestor_3_user_summ / 100)*CalcInvestor_3_user_percent)*CalcInvestor_3_user_time) + CalcInvestor_3_user_summ);
-		$('#CalcInvestor_3_result').html(CalcInvestor_3_outcome + "<i>USD.</i>");
+		$('#CalcInvestor_3_result').html(CalcInvestor_3_outcome + "<i>руб.</i>");
 	}
 	CalcInvestor_3_result();
 
@@ -709,7 +709,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestor_4_result() {
 		CalcInvestor_4_outcome = parseInt((((CalcInvestor_4_user_summ / 100)*CalcInvestor_4_user_percent)*CalcInvestor_4_user_time) + CalcInvestor_4_user_summ);
-		$('#CalcInvestor_4_result').html(CalcInvestor_4_outcome + "<i>USD.</i>");
+		$('#CalcInvestor_4_result').html(CalcInvestor_4_outcome + "<i>руб.</i>");
 	}
 	CalcInvestor_4_result();
 
@@ -842,7 +842,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestorLegal_1_result() {
 		CalcInvestorLegal_1_outcome = parseInt((((CalcInvestorLegal_1_user_summ / 100)*CalcInvestorLegal_1_user_percent)*CalcInvestorLegal_1_user_time) + CalcInvestorLegal_1_user_summ);
-		$('#CalcInvestorLegal_1_result').html(CalcInvestorLegal_1_outcome + "<i>USD.</i>");
+		$('#CalcInvestorLegal_1_result').html(CalcInvestorLegal_1_outcome + "<i>руб.</i>");
 	}
 	CalcInvestorLegal_1_result();
 
@@ -1050,7 +1050,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestorLegal_2_result() {
 		CalcInvestorLegal_2_outcome = parseInt((((CalcInvestorLegal_2_user_summ / 100)*CalcInvestorLegal_2_user_percent)*CalcInvestorLegal_2_user_time) + CalcInvestorLegal_2_user_summ);
-		$('#CalcInvestorLegal_2_result').html(CalcInvestorLegal_2_outcome + "<i>USD.</i>");
+		$('#CalcInvestorLegal_2_result').html(CalcInvestorLegal_2_outcome + "<i>руб.</i>");
 	}
 	CalcInvestorLegal_2_result();
 
@@ -1255,7 +1255,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcInvestorLegal_3_result() {
 		CalcInvestorLegal_3_outcome = parseInt((((CalcInvestorLegal_3_user_summ / 100)*CalcInvestorLegal_3_user_percent)*CalcInvestorLegal_3_user_time) + CalcInvestorLegal_3_user_summ);
-		$('#CalcInvestorLegal_3_result').html(CalcInvestorLegal_3_outcome + "<i>USD.</i>");
+		$('#CalcInvestorLegal_3_result').html(CalcInvestorLegal_3_outcome + "<i>руб.</i>");
 	}
 	CalcInvestorLegal_3_result();
 

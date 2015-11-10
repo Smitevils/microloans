@@ -19,8 +19,8 @@
 	<header class="clearfix">
 		<div class="header__logo-container clearfix">
 			<a href="#">
-				<img src="assets/img/logos/logo-header.png" alt="logo">
-				<img src="assets/img/logos/logo-header-mini.png" alt="logo-mini">
+				<img src="assets/img/logos/Inkasso.svg" alt="logo">
+				<img src="assets/img/logos/Inkasso_mini.svg" alt="logo-mini">
 			</a>
 		</div>
 		<!-- Скрытая кнопка - бутерброд - отображается в мобильной версии -->
@@ -34,10 +34,10 @@
 					<a href="#">займы</a>
 				</li>
 				<li>
-					<a href="#">инвесторам</a>
+					<a href="#">инвестиции</a>
 				</li>
 				<li>
-					<a href="#">Новости</a>
+					<a href="#">Пресс-центр</a>
 				</li>
 				<li>
 					<a href="#">Контакты</a>
@@ -45,12 +45,12 @@
 			</ul>
 		</div>
 		<div class="header__calculator-container">
-			<div id="calculator-btn-1" class="header__calculator-button active">
+			<div id="calculator-btn-1" class="header__calculator-button">
 				<p>
 					калькулятор инвестора
 				</p>
 			</div>
-			<div id="calculator-btn-2" class="header__calculator-button">
+			<div id="calculator-btn-2" class="header__calculator-button active">
 				<p>
 					калькулятор заемщика
 				</p>
@@ -133,11 +133,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -185,11 +182,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -237,11 +231,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее 
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -289,11 +280,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее 
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -366,11 +354,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее 
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -418,11 +403,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее 
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -470,11 +452,8 @@
 									</li>
 									<li>
 										<div class="calculator__result-btn">
-											Инвестировать
+											Подробнее 
 										</div>
-									</li>
-									<li>
-										<a href="#">подробнее</a>
 									</li>
 								</ul>
 							</div>
@@ -864,8 +843,8 @@
 			<div id="slider-fade">
 				<div class="slide slide-1">
 					<div class="slider-text-box">
-						<h3>займы по паспорту</h3>
-						<p>только лицам достигшим 18 лет</p>
+						<h3>срочные займы</h3>
+						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
 						<div class="slider-nav-container">
@@ -876,8 +855,8 @@
 				</div>
 				<div class="slide slide-2">
 					<div class="slider-text-box">
-						<h3>займы по паспорту</h3>
-						<p>только лицам достигшим 18 лет</p>
+						<h3>срочные займы</h3>
+						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
 						<div class="slider-nav-container">
@@ -888,8 +867,8 @@
 				</div>
 				<div class="slide slide-3">
 					<div class="slider-text-box">
-						<h3>займы по паспорту</h3>
-						<p>только лицам достигшим 18 лет</p>
+						<h3>срочные займы</h3>
+						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
 						<div class="slider-nav-container">
@@ -907,7 +886,7 @@
 			<div class="scheme-step-title-container">
 				<div class="scheme-step-title-content">
 					<h2>
-						Схема<br>получения<br>займа
+						Как<br>это<br>работает
 					</h2>
 				</div>
 			</div>
@@ -919,7 +898,7 @@
 							<div class="scheme-step-content">
 								<img src="assets/img/icons/step-1.png" alt="#">
 								<p>
-									Заполняем форму
+									Заполните<br>форму
 								</p>
 							</div>
 						</div>
@@ -931,7 +910,7 @@
 							<div class="scheme-step-content">
 								<img src="assets/img/icons/step-2.png" alt="#">
 								<p>
-									Заполняем форму
+									одобрение в течении<br>1 дня
 								</p>
 							</div>
 						</div>
@@ -943,7 +922,7 @@
 							<div class="scheme-step-content">
 								<img src="assets/img/icons/step-3.png" alt="#">
 								<p>
-									Заполняем форму
+									заберите<br>деньги
 								</p>
 							</div>
 						</div>
@@ -977,7 +956,7 @@
 			<div class="methods-step-title-container">
 				<div class="methods-step-title-content">
 					<h2>
-						способы погашения долга
+						способы погашения займа
 					</h2>
 				</div>
 			</div>
@@ -1120,10 +1099,10 @@
 								<a href="#">краткосрочные займы для физических лиц</a>
 							</li>
 							<li>
-								<a href="#">займы физическим лицам под залом недвижимости</a>
+								<a href="#">займы физическим лицам под залог недвижимости</a>
 							</li>
 							<li>
-								<a href="#">займы физическим лицам под залом автотранспорта</a>
+								<a href="#">займы физическим лицам под залог автотранспорта</a>
 							</li>
 							<li>
 								<a href="#">займы для индивидуальных предпринимателей</a>

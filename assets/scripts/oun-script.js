@@ -1999,7 +1999,7 @@ $(document).ready(function() {
 		arrows: false,
 		dots: false,
 		autoplay: true,
-		autoplaySpeed: 5000
+		autoplaySpeed: 9000
 	});
 	
 	function checkCalculatorHeightFromSlide() {

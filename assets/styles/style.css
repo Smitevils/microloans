@@ -1100,7 +1100,7 @@ hr {
   font-style: normal;
   font-weight: normal; }
 header {
-  height: 102px;
+  height: 80px;
   background-color: #f8f8f8;
   font-size: 0;
   z-index: 999999; }
@@ -1111,9 +1111,11 @@ header {
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  line-height: 102px; }
+  line-height: 80px; }
   .header__logo-container img[alt="logo"] {
-    display: inline-block; }
+    display: inline-block;
+    width: 80%;
+    height: auto; }
   .header__logo-container img[alt="logo-mini"] {
     display: none; }
 
@@ -1122,7 +1124,7 @@ header {
   height: 100%;
   display: inline-block;
   vertical-align: top;
-  line-height: 98px; }
+  line-height: 80px; }
   .header__menu-container ul {
     display: inline-block;
     list-style: none;
@@ -1172,7 +1174,8 @@ header {
   width: 50%;
   height: 100%;
   background-color: #e8e8e9;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: uppercase; }
   .header__calculator-button p {
     font-family: 'MyriadProBold', MyriadProBold, sans-serif;
     font-weight: 100;
@@ -1213,9 +1216,11 @@ header {
     color: #fff; }
   .calculator-content h1 {
     font-family: 'MyriadProBold', MyriadProBold, sans-serif;
-    font-weight: 800;
+    font-weight: 100;
     font-size: 24px;
-    text-transform: uppercase; }
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0px; }
   .calculator-content span {
     font-family: 'MyriadProBold', MyriadProBold, sans-serif;
     font-size: 14px;
@@ -1223,7 +1228,8 @@ header {
     font-weight: 800; }
 
 .calculator-first-content__switch-container {
-  vertical-align: middle; }
+  vertical-align: middle;
+  padding: 40px 0; }
   .calculator-first-content__switch-container span {
     margin: 0 10px;
     line-height: 40px;
@@ -1713,7 +1719,7 @@ main {
 .slider-container {
   padding-left: 100px;
   width: 100%;
-  height: 700px;
+  height: 724px;
   position: relative; }
 
 #slider-fade {
@@ -1722,7 +1728,7 @@ main {
   height: 100%; }
   #slider-fade .slide {
     width: 100%;
-    height: 700px;
+    height: 724px;
     outline: none !important; }
   #slider-fade .slide-1 {
     background: url(../img/slider/slide-1.jpg) no-repeat center;
@@ -2030,10 +2036,11 @@ h3.block-title {
   font-family: 'MyriadProBold', MyriadProBold, sans-serif;
   font-size: 36px;
   margin: 0;
-  padding: 40px 0;
+  padding: 56px 0;
   color: #3b3d47;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 3px; }
 
 /************ benefits **************/
 .benefits {
@@ -2245,7 +2252,196 @@ footer {
 .calculator__sliders-wrap {
   background-color: rgba(33, 44, 55, 0); }
 
+* {
+  outline: 1px yellowgreen dashed; }
+
 /* header */
+@media screen and (max-width: 1680px) {
+  .header__logo-container {
+    width: 12%; }
+
+  .header__menu-container {
+    width: 42%; }
+
+  .header__menu-container ul li a {
+    font-size: 14px; }
+
+  .header__menu-container ul li:first-child {
+    padding-left: 30px; }
+
+  .header__menu-container ul li {
+    padding-right: 36px; }
+
+  header {
+    height: 80px; }
+
+  .header__logo-container {
+    line-height: 80px; }
+
+  .header__menu-container {
+    line-height: 80px; }
+
+  .header__calculator-container {
+    width: 22%; }
+
+  .header__phone-cabinet-container {
+    width: 24%; }
+
+  .header__phone-container a {
+    font-size: 20px;
+    word-spacing: 6px; }
+
+  .header__phone-container {
+    width: 72%; }
+
+  .header__cabinet-container {
+    width: 28%; }
+
+  .methods-step-block .methods-step-content p {
+    font-size: 24px;
+    width: 164px; } }
+@media screen and (max-width: 1366px) {
+  header {
+    height: 80px; }
+
+  .header__logo-container {
+    line-height: 80px; }
+
+  .header__menu-container {
+    line-height: 80px; }
+
+  .header__menu-container ul li {
+    padding-right: 14px; }
+
+  .header__menu-container ul li a {
+    font-size: 12px; }
+
+  .header__calculator-button p {
+    padding: 0 16%;
+    font-size: 11px; }
+
+  .header__phone-container a {
+    font-size: 16px; }
+
+  .bid-call-btn {
+    width: 86px;
+    height: 86px; }
+
+  .slider-container {
+    padding-left: 86px; }
+
+  .slider-container {
+    height: 500px; }
+
+  #slider-fade .slide {
+    height: 500px; }
+
+  .slider-text-box {
+    width: 238px;
+    height: 224px;
+    padding: 24px; }
+
+  .slider-text-box h3 {
+    font-size: 24px; }
+
+  .slider-nav-container {
+    top: -60px;
+    width: 120px;
+    height: 60px; }
+
+  .calculator-content h1 {
+    font-size: 20px; }
+
+  .calculator-first-content__switch-container {
+    padding: 10px 0; }
+
+  .scheme-container {
+    margin-left: 86px;
+    margin-right: 86px; }
+
+  .scheme-step-title-container {
+    width: 240px;
+    height: 224px;
+    padding: 20px; }
+
+  .scheme-step-title-container:before {
+    width: 200px;
+    height: 224px;
+    right: -10px; }
+
+  .scheme-steps-wrap .row {
+    margin-left: 240px; }
+
+  .scheme-step-block {
+    width: 100%;
+    height: 224px; }
+
+  .scheme-step-content img {
+    width: 84px;
+    height: auto; }
+
+  .scheme-step-block .scheme-step-content p {
+    font-size: 12px; }
+
+  .scheme-step-block .scheme-step-content:before {
+    top: 50px;
+    right: -30px; }
+
+  .scheme-step-block .scheme-step-content {
+    padding-bottom: 20px; }
+
+  .benefits {
+    padding-left: 86px;
+    margin-right: 86px; }
+
+  h3.block-title {
+    font-size: 28px;
+    padding: 36px 0; }
+
+  .benefits {
+    padding-bottom: 54px; }
+
+  .benefits i {
+    font-size: 18px; }
+
+  .methods-container {
+    margin-left: 86px;
+    margin-right: 86px; }
+
+  .methods-step-title-container {
+    width: 240px;
+    height: 240px; }
+
+  .methods-step-title-container .methods-step-title-content h2 {
+    font-size: 24px; }
+
+  .methods-step-block {
+    height: 240px; }
+
+  .methods-step-block .methods-step-content p {
+    font-size: 18px; }
+
+  .methods-step-block .methods-step-content {
+    font-size: 34px; }
+
+  .methods-step-block .methods-step-content p {
+    width: 132px; }
+
+  .reviews {
+    padding-right: 86px;
+    margin-left: 86px; }
+
+  footer {
+    padding: 0 86px; }
+
+  .calculator__result {
+    padding: 0; }
+
+  .calculator__tabs-container {
+    margin: 5px 0; }
+
+  .calculator__result ul {
+    margin-left: 5px 0; } }
 @media screen and (max-width: 1600px) {
   .header__calculator-button p {
     padding: 0 10%; }
@@ -2262,28 +2458,52 @@ footer {
   .header__logo-container img {
     width: 80%;
     height: auto; } }
+@media screen and (max-width: 1500px) {
+  /*header {
+  	height: 68px;
+  }
+  .header__logo-container {line-height: 68px;}
+  .header__menu-container {line-height: 68px;}
+  .slider-text-box {padding: 20px 44px; height: 244px;}
+  .first-calculator__phisic-faces {padding: 0 80px;}*/ }
 @media screen and (max-width: 1200px) {
   .header__calculator-button p {
     padding: 0;
     text-align: center; }
 
-  .header__calculator-container {
-    display: none; }
+  .header__menu-container {
+    width: 38%; }
 
-  .header__logo-container {
-    width: 15%; }
+  .header__calculator-container {
+    width: 20%; }
 
   .header__phone-cabinet-container {
     width: 30%; }
 
-  .header__phone-container {
-    width: 70%; }
+  .calculator-content h1 {
+    font-size: 16px; }
 
-  .header__cabinet-container {
-    width: 30%; }
+  .calculator-first-content__switch-container {
+    padding: 8px 0; }
 
-  .header__menu-container {
-    width: 55%; } }
+  .header__calculator-button p {
+    font-size: 9px; }
+
+  .slider-text-box {
+    width: 200px;
+    height: 182px;
+    padding: 23px; }
+
+  .slider-text-box h3 {
+    font-size: 18px; }
+
+  .slider-nav-container {
+    top: -50px;
+    width: 100px;
+    height: 50px; } }
+@media screen and (max-width: 1000px) {
+  .header__calculator-container {
+    display: none; } }
 @media screen and (max-width: 1000px) {
   header {
     height: 60px; }
@@ -2396,6 +2616,9 @@ footer {
     border-bottom: 1px solid #999; } }
 /* /header */
 /* slider */
+@media screen and (max-width: 1500px) {
+  /*.slider-container {height: 500px;}
+  #slider-fade .slide {height: 500px;}*/ }
 @media screen and (max-width: 1200px) {
   .slider-container {
     height: 500px; }

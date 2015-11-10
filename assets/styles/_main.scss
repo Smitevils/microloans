@@ -1,5 +1,5 @@
 header {
-	height: 102px;
+	height: 80px;
 	background-color: $bg-1;
 	font-size: 0;
 	z-index: 999999;
@@ -10,16 +10,16 @@ header {
 	vertical-align: top;
 	text-align: center;
 	//
-	line-height: 102px;
+	line-height: 80px;
 	//
-	img[alt="logo"] {display: inline-block;}
+	img[alt="logo"] {display: inline-block; width: 80%; height: auto;}
 	img[alt="logo-mini"] {display: none;}
 }
 .header__menu-container {
 	width: 40%; height: 100%;
 	display: inline-block;
 	vertical-align: top;
-	line-height: 98px;
+	line-height: 80px;
 	//
 	ul {
 		display: inline-block;
@@ -62,6 +62,7 @@ header {
 	width: 50%; height: 100%;
 	background-color: $bg-3;
 	cursor: pointer;
+	text-transform: uppercase;
 	//
 	p {
 		@include MyriadProBold;
@@ -101,9 +102,11 @@ header {
 	//
 	h1 {
 		@include MyriadProBold;
-		font-weight: 800;
+		font-weight: 100;
 		font-size: 24px;
+		letter-spacing: 3px;
 		text-transform: uppercase;
+		margin: 0px;
 	}
 	span {
 		@include MyriadProBold;
@@ -114,6 +117,7 @@ header {
 }
 .calculator-first-content__switch-container {
 	vertical-align: middle;
+	padding: 40px 0;
 	//
 	span {margin: 0 10px; line-height: 40px; vertical-align: middle;}
 }
@@ -718,6 +722,8 @@ main {
 		-ms-animation-iteration-count: 1;
 		-ms-transform-origin: 50% 50%;
 	}
+	// скрытый блок заказа звонка
+	
 }
 
 /* Slider */
@@ -725,7 +731,7 @@ main {
 .slider-container {
 	padding-left: 100px;
 	width: 100%;
-	height: 700px;
+	height: 724px;
 	position: relative;
 }
 
@@ -733,7 +739,7 @@ main {
 	position: relative; width: 100%; height: 100%;
 	//
 	.slide {
-		width: 100%; height: 700px;
+		width: 100%; height: 724px;
 		outline: none!important;
 	}
 	.slide-1 {
@@ -1048,10 +1054,11 @@ main {
 
 h3.block-title {
 	@include MyriadProBold;
-	font-size: 36px; margin: 0; padding: 40px 0;
+	font-size: 36px; margin: 0; padding: 56px 0;
 	color: $f-11;
 	text-align: center;
 	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 /************ benefits **************/

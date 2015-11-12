@@ -33,20 +33,20 @@
 		font-size: 11px;
 	}
 	.header__phone-container a {font-size: 16px;}
-	.bid-call-btn {width: 86px; height: 86px;}
-	.slider-container {padding-left: 86px;}
+	.bid-call-btn {width: 80px; height: 80px;}
+	.slider-container {padding-left: 80px;}
 	.slider-container {height: 500px;}
 	#slider-fade .slide {height: 500px;}
 	.slider-text-box {
-		width: 238px;
-		height: 224px;
-		padding: 24px;
+		width: 214px;
+		height: 206px;
+		padding: 12px;
 	}
 	.slider-text-box h3 {font-size: 24px;}
 	.slider-nav-container {
-		top: -60px;
-		width: 120px;
-		height: 60px;
+		top: -50px;
+		width: 100px;
+		height: 50px;
 	}
 	.calculator-content h1 {font-size: 20px;}
 	.calculator-first-content__switch-container {
@@ -54,17 +54,18 @@
 	}
 	/////////////////
 	.scheme-container {
-		margin-left: 86px; margin-right: 86px;
+		margin-left: 80px; margin-right: 80px;
 	}
 	.scheme-step-title-container {
-		width: 240px;
+		width: 214px;
 		height: 224px;
 		padding: 20px;
 	}
+	.scheme-steps-wrap .row {margin-left: 214px;}
 	.scheme-step-title-container:before {
 		width: 200px;
 		height: 224px;
-		right: -10px;
+		right: -15px;
 	}
 	.scheme-steps-wrap .row {
 		margin-left: 240px;
@@ -84,33 +85,39 @@
 	}
 	.scheme-step-block .scheme-step-content {padding-bottom: 20px;}
 	//
-	.benefits {padding-left: 86px; margin-right: 86px;}
+	.benefits {padding-left: 80px; margin-right: 80px;}
 	h3.block-title {font-size: 28px; padding: 36px 0;}
 	.benefits {padding-bottom: 54px;}
-	.benefits i {font-size: 18px;}
+	.benefits i {font-size: 18px; line-height: 66px;}
 	.methods-container {
-		margin-left: 86px;
-		margin-right: 86px;
+		margin-left: 80px;
+		margin-right: 80px;
 	}
 	.methods-step-title-container {
-		width: 240px;
+		width: 214px;
 		height: 240px;
 	}
+	.methods-steps-wrap .row {margin-left: 214px;}
 	.methods-step-title-container .methods-step-title-content h2 {font-size: 24px;}
 	.methods-step-block {height: 240px;}
 	.methods-step-block .methods-step-content p {font-size: 18px;}
 	.methods-step-block .methods-step-content {font-size: 34px;}
 	.methods-step-block .methods-step-content p {width: 132px;}
 	.reviews {
-		padding-right: 86px;
-		margin-left: 86px;
+		padding-right: 80px;
+		margin-left: 80px;
 	}
 	footer {
-		padding: 0 86px;
+		padding: 0 80px;
 	}
 	.calculator__result {padding: 0;}
 	.calculator__tabs-container {margin: 5px 0;}
 	.calculator__result ul {margin-left: 5px 0;}
+	//
+	.reviews__block {margin: 0 10px;}
+	.reviews__text {padding: 24px 24px;}
+	.reviews__text:before {left: -14px; top: 14px;}
+	.reviews__text:after {right: 0px; bottom: 14px;}
 }
 
 @media screen and (max-width: 1600px) {
@@ -142,7 +149,7 @@
 	.header__phone-cabinet-container {width: 30%;}
 	.calculator-content h1 {font-size: 16px;}
 	.calculator-first-content__switch-container {padding: 8px 0;}
-	.header__calculator-button p {font-size: 9px;}
+	.header__calculator-button p {font-size: 12px; @include MyriadProRegular;}
 
 	//.header__calculator-container {display: none;}
 	//.header__logo-container {width: 15%;}
@@ -153,7 +160,7 @@
 	.slider-text-box {
 		width: 200px;
 		height: 182px;
-		padding: 23px;
+		padding: 10px 22px;
 	}
 	.slider-text-box h3 {font-size: 18px;}
 	.slider-nav-container {
@@ -161,9 +168,7 @@
 		width: 100px;
 		height: 50px;
 	}
-}
-@media screen and (max-width: 1000px) {
-	.header__calculator-container {display: none;}
+	.reviews__header {font-size: 14px;}
 }
 @media screen and (max-width: 1000px) {
 	header {height: 60px;}
@@ -183,6 +188,11 @@
 	.header__cabinet-container {width: 20%;}
 	.header__phone-container a {font-size: 16px; line-height: 20px;}
 	.header__phone-container a:before {width: 20px; height: 20px; line-height: 20px;}
+}
+@media screen and (max-width: 766px) {
+	.col-lg-4:nth-of-type(1) .scheme-step-block .scheme-step-content:before {right: 36px; bottom: 0;}
+	.col-lg-4:nth-of-type(2) .scheme-step-block .scheme-step-content:before {right: 56px; bottom: 0;}
+	.col-lg-4:nth-of-type(3) .scheme-step-block .scheme-step-content:before {right: 32px; bottom: 0;}
 }
 @media screen and (max-width: 700px) {
 	header {background-color: $bg-2; position: fixed; width: 100%; margin-top: -60px;}
@@ -222,6 +232,10 @@
 	//
 	header {border-bottom: 1px solid #999;}
 	.header__menu-container ul li {border-bottom: 1px solid #999;}
+	//
+	.header__phone-cabinet-container .header__admin-window .header__admin-window-content.login.open {padding: 60px 0;}
+	.header__phone-cabinet-container .header__admin-window .header__admin-window-content.register.open {padding: 24px 0;}
+	.header__phone-cabinet-container .header__admin-window.open {height: 280px; margin-top: -282px;}
 }
 
 /* /header */
@@ -260,7 +274,7 @@
 		margin-left: 0; margin-right: 0;
 	}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
 	.scheme-step-block .scheme-step-content:before {
 		top: auto;
 		right: 68px;
@@ -281,7 +295,17 @@
 	.methods-step-block.methods-step-1:after, .methods-step-block.methods-step-2:after, .methods-step-block.methods-step-3:after, .methods-step-block.methods-step-4:after {font-size: 140px;}
 	.methods-step-block .methods-step-content {padding-bottom: 18px;}
 }
+@media screen and (max-width: 1000px) {
+	.header__calculator-container {display: none;}
+	.header__phone-cabinet-container .header__admin-window {margin-top: 60px;}
+	footer .footer-1-column p {font-size: 16px;}
+	.methods-step-block.methods-step-1:after, .methods-step-block.methods-step-2:after, .methods-step-block.methods-step-3:after, .methods-step-block.methods-step-4:after {font-size: 120px;}
+}
 @media screen and (max-width: 1200px) {
+	.header__phone-cabinet-container .header__admin-window .header__admin-window-content {
+		width: 80%;
+	}
+	//
 	.methods-step-title-container {
 		display: block;
 		position: relative;

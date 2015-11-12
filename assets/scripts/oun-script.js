@@ -22,6 +22,18 @@ $(document).ready(function() {
 	checkCalculatorButtons();
 	// задаем размер окнам калькулятора
 	function checkSizeCalculators() {
+		// var windowWidth = $(window).width();
+		// console.log(windowWidth)
+		$('#calculator-btn-1, #calculator-btn-2').css('width', '50%');
+
+		var calc_btn_w = $('#calculator-btn-1').width();
+		calc_btn_w = Math.floor(calc_btn_w)
+		$('#calculator-btn-1').width(calc_btn_w-1);
+
+		var calc2_btn_w = $('#calculator-btn-2').width();
+		calc2_btn_w = Math.floor(calc2_btn_w)
+		$('#calculator-btn-2').width(calc2_btn_w);
+
 		var calculator_first_width = ($('#calculator-btn-1').width() + $('#calculator-btn-2').width() + $('.header__phone-cabinet-container').width());
 		$('#calculator-1').outerWidth(calculator_first_width);
 		var calculator_second_width = ($('#calculator-btn-2').width() + $('.header__phone-cabinet-container').width())
@@ -47,7 +59,7 @@ $(document).ready(function() {
 		checkCalculatorButtons();
 	});
 	/* switch 1*/
-	$('#calculator-1 span.calculator_switch[data-switch-pos] i').click(function(event) {
+	$('#calculator-1 span.calculator_switch[data-switch-pos]').click(function(event) {
 		event.preventDefault();
 		if ($('#calculator-1 span.calculator_switch').attr('data-switch-pos') == 1) {
 			$('#calculator-1 span.calculator_switch').attr('data-switch-pos', '2');
@@ -56,7 +68,7 @@ $(document).ready(function() {
 		}
 	});
 	/* switch 2*/
-	$('#calculator-2 span.calculator_switch[data-switch-pos] i').click(function(event) {
+	$('#calculator-2 span.calculator_switch[data-switch-pos]').click(function(event) {
 		event.preventDefault();
 		if ($('#calculator-2 span.calculator_switch').attr('data-switch-pos') == 1) {
 			$('#calculator-2 span.calculator_switch').attr('data-switch-pos', '2');
@@ -1437,19 +1449,21 @@ $(document).ready(function() {
 	/* создаем переменные - значения слайдеров и результат */
 	var CalcBorrower_2_user_summ = 0; // слайдер суммы
 	var CalcBorrower_2_user_time = 0; // слайдер период займа
-	var CalcBorrower_2_user_percent = 4.5; // слайдер период займа
+	var CalcBorrower_2_user_percent = 7; // слайдер период займа
 	var CalcBorrower_2_outcome; // результат
+	var CalcBorrower_2_period; // период
+	var CalcBorrower_2_summ // сумма
 
 
 	// Слайд суммы
 	var CalcBorrower_2_summ = document.getElementById('CalcBorrower_2_summ'); // Слайд
 	// Настройки слайда
 	var CalcBorrower_2_summ_Settings = {
-		start: [ 300000 ],
+		start: [ 100000 ],
 		step: 50000,
 		range: {
-			'min': [ 300000 ],
-			'max': [ 5000000 ]
+			'min': [ 100000 ],
+			'max': [ 10000000 ]
 		},
 		format: wNumb({
 			decimals: 1,
@@ -1472,6 +1486,7 @@ $(document).ready(function() {
 			CalcBorrower_2_summ_ValueElement_1.innerHTML = parseInt(values[handle]);
 			CalcBorrower_2_summ_ValueElement_2.innerHTML = parseInt(values[handle]);
 			CalcBorrower_2_user_summ = parseInt(values[handle]);
+			CalcBorrower_2_summ = parseInt(values[handle]);
 			CalcBorrower_2_result();
 		});
 	}
@@ -1484,11 +1499,11 @@ $(document).ready(function() {
 	var CalcBorrower_2_time = document.getElementById('CalcBorrower_2_time'); // Слайд
 	// Настройки слайда
 	var CalcBorrower_2_time_Settings = {
-		start: [ 1 ],
+		start: [ 3 ],
 		step: 1,
 		range: {
-			'min': [ 1 ],
-			'max': [ 24 ]
+			'min': [ 3 ],
+			'max': [ 60 ]
 		},
 		format: wNumb({
 			decimals: 1,
@@ -1511,6 +1526,8 @@ $(document).ready(function() {
 			CalcBorrower_2_time_ValueElement_1.innerHTML = parseInt(values[handle]);
 			CalcBorrower_2_time_ValueElement_2.innerHTML = parseInt(values[handle]);
 			CalcBorrower_2_user_time = parseInt(values[handle]);
+			CalcBorrower_2_period = parseInt(values[handle]);
+			//alert(CalcBorrower_2_period)
 			CalcBorrower_2_result();
 		});
 	}
@@ -1520,6 +1537,13 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcBorrower_2_result() {
 		CalcBorrower_2_outcome = (((CalcBorrower_2_user_summ / 100)*CalcBorrower_2_user_percent)*CalcBorrower_2_user_time) + CalcBorrower_2_user_summ;
+		var rate = CalcBorrower_2_user_percent;
+		var periods = CalcBorrower_2_period;
+		var value = CalcBorrower_2_summ;
+		var start = 1;
+		var end = CalcBorrower_2_period;
+		var type = 0;
+		//CalcBorrower_2_outcome = CUMIPMT(rate, periods, value, start, end, type);
 		$('#CalcBorrower_2_result').html(CalcBorrower_2_outcome + " руб.");
 	}
 	CalcBorrower_2_result();
@@ -1870,8 +1894,8 @@ $(document).ready(function() {
 	var CalcBorrowerLegal_3_summ = document.getElementById('CalcBorrowerLegal_3_summ'); // Слайд
 	// Настройки слайда
 	var CalcBorrowerLegal_3_summ_Settings = {
-		start: [ 150000 ],
-		step: 50000,
+		start: [ 10000 ],
+		step: 10000,
 		range: {
 			'min': [ 150000 ],
 			'max': [ 1000000 ]
@@ -1969,7 +1993,7 @@ $(document).ready(function() {
 	/**/
 	/* Открываем слайдеры физ лиц или юр лиц на вкладке заемщика */
 	/* switch */
-	$('#calculator-1 span.calculator_switch[data-switch-pos]').find('i').click(function() {
+	$('#calculator-1 span.calculator_switch[data-switch-pos]').click(function() {
 		if ($('#calculator-1 span.calculator_switch').attr('data-switch-pos') == 1) {
 			$('.first-calculator__legal-faces').hide();
 			$('.first-calculator__phisic-faces').show();
@@ -1979,7 +2003,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#calculator-2 span.calculator_switch[data-switch-pos]').find('i').click(function() {
+	$('#calculator-2 span.calculator_switch[data-switch-pos]').click(function() {
 		if ($('#calculator-2 span.calculator_switch').attr('data-switch-pos') == 1) {
 			$('.borrower-calculator-legal').hide();
 			$('.borrower-calculator-phisic').show();
@@ -2099,4 +2123,156 @@ $(document).ready(function() {
 	$('.borrower-calculator-legal').find('.calculator__tab').click(function() {
 		checkBorrowerLegalCalc();
 	});
+});
+
+$(document).ready(function() {
+	// скрипт открывает меню заказа звонка
+	$('.bid-call-btn').on('click', function (e) {
+		if ($(e.target || e.srcElement).is('.call-bid-block, input[type="text"], input[type="submit"]')) {
+			// ивент сработал на вложенном элементе
+			// e.stopPropogation();
+			// return false;
+		} else {
+			$('.call-bid-block').toggleClass('open');
+		}
+	});
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".bid-call-btn"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('.call-bid-block').removeClass('open');
+		}
+	});
+
+	//скрипт открывает и скрывает окно в регистрацмей и входом
+	$('.header__cabinet-container').on('click', function (e) {
+		$('.header__admin-window').toggleClass('open');
+		$('.header__admin-window-content.login').addClass('open');
+		$('.header__admin-window-content.register').removeClass('open');
+	});
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".header__cabinet-container, .header__admin-window"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('.header__admin-window').removeClass('open');
+		}
+	});
+	$('.header__admin-window-content.login a').click(function(event) {
+		event.preventDefault();
+		$('.header__admin-window-content.login').removeClass('open');
+		$('.header__admin-window-content.register').addClass('open');
+	});
+	$('.header__admin-window-content.register a').click(function(event) {
+		event.preventDefault();
+		$('.header__admin-window-content.login').addClass('open');
+		$('.header__admin-window-content.register').removeClass('open');
+	});
+
+});
+
+/* Валидация форм */
+$(document).ready(function() {
+	// заказ звонка
+	$('#bidcall').validate({
+		rules: {
+			// no quoting necessary
+			name: {
+				required: true,
+				minlength: 2
+			},
+			phone: {
+				required: true,
+				minlength: 2
+			}
+		},
+		messages: {
+			name: {
+				required: "",
+				minlength: ""
+			},
+			phone: {
+				required: "",
+				minlength: ""
+			}
+		},
+		submitHandler: function() {
+			alert("valid")
+		}
+	});
+	// вход
+	$('#login').validate({
+		rules: {
+			// no quoting necessary
+			login: {
+				required: true,
+				minlength: 2
+			},
+			password: {
+				required: true,
+				minlength: 5
+			}
+		},
+		messages: {
+			login: {
+				required: "",
+				minlength: ""
+			},
+			password: {
+				required: "",
+				minlength: ""
+			}
+		},
+		submitHandler: function() {
+			alert("valid")
+		}
+	});
+	// регистрация
+	$('#register').validate({
+		rules: {
+			// no quoting necessary
+			login: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+				minlength: 5
+			},
+			confirmpassword: {
+				required: true,
+				minlength: 5,
+				equalTo: "#register .password"
+			}
+		},
+		messages: {
+			login: {
+				required: "",
+				minlength: ""
+			},
+			email: {
+				required: "",
+				minlength: ""
+			},
+			password: {
+				required: "",
+				minlength: ""
+			},
+			confirmpassword: {
+				required: "",
+				minlength: ""
+			}
+		},
+		submitHandler: function() {
+			alert("valid")
+		}
+	});
+});
+
+/* маски */
+$(document).ready(function() {
+	$('#bidcall input[name="phone"]').mask("+9(999) 999-9999");
 });

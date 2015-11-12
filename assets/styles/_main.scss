@@ -34,10 +34,11 @@ header {
 			&:last-child {padding-right: 25px;}
 			//
 			a {
-				@include MyriadProBold;
+				@include MyriadProRegular;
+				font-weight: bold;
 				color: $f-1;
 				font-size: 12px;
-				font-weight: 100;
+				font-weight: normal;
 				text-transform: uppercase;
 				text-decoration: none;
 				//
@@ -53,6 +54,7 @@ header {
 	vertical-align: top;
 	width: 21%; height: 100%;
 	vertical-align: top;
+	background-color: #65666e;
 }
 .header__calculator-button {
 	@include InlineFlex;
@@ -89,6 +91,7 @@ header {
 	box-sizing: border-box;
 }
 #calculator-1, #calculator-2 {display: none; overflow: hidden;}
+
 // calculator content
 .calculator-content {
 	font-size: 14px;
@@ -419,7 +422,7 @@ span.calculator_switch {
 	width: 82px; height: 40px; display: inline-block;
 	background-color: rgba(255,255,255,0.35);
 	border-radius: 20px;
-	position: relative;
+	position: relative; cursor: pointer;
 	//
 	i {
 		position: absolute;
@@ -431,6 +434,9 @@ span.calculator_switch {
 		@include transition-03s;
 		background: url(../img/icons/switch-btn.png) no-repeat center;
 		background-size: contain;
+		-webkit-box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75)!important;
+		-moz-box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75)!important;
+		box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75);
 		//
 	}
 	&[data-switch-pos="1"] i {
@@ -535,6 +541,12 @@ span.calculator_switch {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-weight: lighter;
+	@include transition-03s;
+	//
+	&:hover {
+		background-color: #A24250;
+
+	}
 }
 
 /* calculator faces block */
@@ -581,6 +593,11 @@ span.calculator_switch {
 	cursor: pointer;
 	&:before, &:after {display: none;}
 }
+.noUi-handle-lower {
+	-webkit-box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75)!important;
+	-moz-box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75);
+	box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75);
+}
 .nouislider-under-value {
 	position: absolute;
 	width: 200px;
@@ -599,6 +616,82 @@ span.calculator_switch {
 	vertical-align: top;
 	width: 24%; height: 100%;
 	background-color: $bg-2;
+	position: relative;
+	//
+	.header__admin-window {
+		display: none;
+		opacity: 0;
+		position: absolute;
+		width: 100%; min-height: 100px;
+		background-color: $bg-2;
+		margin-top: 80px;
+		z-index: 9999;
+		text-align: center;
+		border-top: 1px solid #65666e;
+		@include transition-03s;
+		//
+		&.open {display: block; opacity: 1;}
+		//
+		.header__admin-window-content {
+			display: none;
+		}
+		.header__admin-window-content.login.open {display: inline-block;}
+		.header__admin-window-content.register.open {display: inline-block;}
+		.header__admin-window-content {
+			width: 60%;
+			text-align: left;
+			display: none;
+			padding: 40px 0;
+			//
+			input[type="text"] {
+				width: 100%;
+				padding: 6px 20px;
+				background: transparent;
+				border: 2px solid $bg-11;
+				border-radius: 15px;
+				@include MyriadProRegular;
+				font-size: 14px;
+				color: white;
+				outline: none;
+				margin-bottom: 12px;
+				@include transition-03s;
+			}
+			input[type="text"].error {
+				border: 2px solid $bg-12;
+			}
+			input[type="text"].valid {
+				border: 2px solid $bg-13;
+			}
+			input[type="text"]::-webkit-input-placeholder {color: white;}
+			input[type="text"]:-moz-placeholder {color: white;}
+			input[type="text"]::-moz-placeholder {color: white;}
+			input[type="text"]:-ms-input-placeholder {color: white;}
+			input[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 25px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 10px 26px;
+				outline: none;
+				margin-right: 20px;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+			a {
+				@include MyriadProRegular;
+				font-size: 14px;
+				color: $f-16;
+				text-decoration: underline;
+				//
+				&:hover {color: white;}
+			}
+		}
+	}
 }
 .header__phone-container {
 	@include InlineFlex;
@@ -681,7 +774,7 @@ main {
 	position: absolute;
 	z-index: 9999;
 	left: 0; top: 0;
-	width: 100px; height: 100px;
+	width: 80px; height: 80px;
 	background-color: $bg-2;
 	cursor: pointer;
 	@include InlineFlex;
@@ -691,8 +784,8 @@ main {
 	//
 	p {
 		text-align: center;
-		@include MyriadProBold;
-		font-size: 12px;
+		@include MyriadProRegular;
+		font-size: 10px;
 		font-weight: 100;
 		text-transform: uppercase;
 		color: $f-10;
@@ -723,13 +816,80 @@ main {
 		-ms-transform-origin: 50% 50%;
 	}
 	// скрытый блок заказа звонка
-	
+	.call-bid-block {
+		position: absolute; left: 80px; top: 0;
+		height: 100%; width: 0px; background-color: $bg-2;
+		text-align: center;
+		cursor: auto;
+		overflow: hidden; opacity: 0;
+		@include transition-03s;
+		//
+		&.open {width: 450px; opacity: 1;}
+		//
+		.call-bid-block-content {
+			display: inline-block; padding-top: 20px; width: 422px;
+			//
+			input[type="text"] {
+				width: 140px;
+				padding: 6px 20px;
+				background: transparent;
+				border: 2px solid $bg-11;
+				border-radius: 15px;
+				@include MyriadProRegular;
+				font-size: 14px;
+				color: white;
+				outline: none;
+				margin-right: 12px;
+				@include transition-03s;
+			}
+			input[type="text"].error {
+				border: 2px solid $bg-12;
+			}
+			input[type="text"].valid {
+				border: 2px solid $bg-13;
+			}
+			input[type="text"]::-webkit-input-placeholder {color: white;}
+			input[type="text"]:-moz-placeholder {color: white;}
+			input[type="text"]::-moz-placeholder {color: white;}
+			input[type="text"]:-ms-input-placeholder {color: white;}
+			input[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 15px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 6px 20px;
+				outline: none;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+			button[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 15px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 6px 20px;
+				outline: none;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+		}
+	}
 }
 
 /* Slider */
 
 .slider-container {
-	padding-left: 100px;
+	padding-left: 80px;
 	width: 100%;
 	height: 724px;
 	position: relative;
@@ -766,7 +926,7 @@ main {
 	color: $f-11;
 	//
 	h3 {
-		@include MyriadProBold;
+		@include MyriadProRegular;
 		font-weight: 800;
 		font-size: 30px;
 		width: 100%;
@@ -784,7 +944,8 @@ main {
 .slider-rext-box-btn {
 	display: inline-block;
 	border: 1px solid #b5b7c0;
-	@include MyriadProBold;
+	@include MyriadProRegular;
+	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 800;
 	padding: 12px 28px;
@@ -845,7 +1006,7 @@ main {
 /************ scheme **************/
 
 .scheme-container {
-	margin-left: 100px; margin-right: 100px;
+	margin-left: 80px; margin-right: 80px;
 	//height: 262px;
 }
 .scheme-step-title-container {
@@ -872,8 +1033,9 @@ main {
 		position: relative;
 		//
 		h2 {
-			@include MyriadProBold;
-			font-size: 30px;
+			@include MyriadProRegular;
+			font-size: 28px;
+			font-weight: normal;
 			color: $f-6;
 			text-transform: uppercase;
 			margin: 0;
@@ -911,7 +1073,7 @@ main {
 			display: block;
 			width: 16px; height: 27px;
 			position: absolute;
-			top: 40px; right: -10px;
+			top: 40px; right: -30px;
 			background: url(../img/icons/step-arrow.png) no-repeat center;
 			background-size: contain;
 		}
@@ -930,7 +1092,7 @@ main {
 /************ methods **************/
 
 .methods-container {
-	margin-left: 100px; margin-right: 100px;
+	margin-left: 80px; margin-right: 80px;
 }
 
 .methods-steps-wrap {
@@ -965,9 +1127,10 @@ main {
 		padding-top: 24px;
 		//
 		h2 {
-			@include MyriadProBold;
-			font-size: 30px;
+			@include MyriadProRegular;
+			font-size: 28px;
 			color: $f-6;
+			font-weight: normal;
 			text-transform: uppercase;
 			margin: 0;
 		}
@@ -1064,7 +1227,7 @@ h3.block-title {
 /************ benefits **************/
 
 .benefits {
-	padding-left: 100px; margin-right: 100px;
+	padding-left: 80px; margin-right: 80px;
 	background-color: $bg-8;
 	padding-bottom: 60px;
 	//
@@ -1139,7 +1302,7 @@ h3.block-title {
 /************ reviews **************/
 
 .reviews {
-	padding-right: 100px; margin-left: 100px;
+	padding-right: 80px; margin-left: 80px;
 	background-color: $bg-8;
 	padding-bottom: 60px;
 }
@@ -1186,7 +1349,7 @@ h3.block-title {
 	border-radius: 28px/35px;
 	height: 64px;
 	line-height: 64px;
-	@include MyriadProBold;
+	@include MyriadProRegular;
 	font-size: 18px;
 	color: $f-12;
 	text-transform: uppercase;
@@ -1229,7 +1392,7 @@ h3.block-title {
 /************ footer **************/
 
 footer {
-	background-color: $bg-10; padding: 0 100px;
+	background-color: $bg-10; padding: 0 80px;
 	color: $f-13;
 	//
 	.footer-content {
@@ -1287,7 +1450,7 @@ footer {
 			&:hover {text-transform: none;}
 		}
 	}
-	.footer-3-column ul li {width: 46%; float: left;}
+	.footer-3-column ul li {width: 44%; padding-right: 2%; float: left;}
 }
 
 .calculator__sliders-wrap {

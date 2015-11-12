@@ -14,6 +14,26 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/noUiSlider.8.0.2/nouislider.min.css">
 	<!-- Slick Slider -->
 	<link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/img/faviconmanifest.json">
+	<link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 	<header class="clearfix">
@@ -128,7 +148,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestor_1_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
@@ -177,7 +197,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestor_2_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
@@ -226,7 +246,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestor_3_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
@@ -275,7 +295,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestor_4_result">1 560 780<i>руб.</i></span>
 									</li>
 									<li>
@@ -349,7 +369,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestorLegal_1_result">#1<i>руб.</i></span>
 									</li>
 									<li>
@@ -398,7 +418,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestorLegal_2_result">#2<i>руб.</i></span>
 									</li>
 									<li>
@@ -447,7 +467,7 @@
 							<div class="calculator__result">
 								<ul>
 									<li>
-										<p>ваша прибыль</p>
+										<p>Вы получите</p>
 										<span id="CalcInvestorLegal_3_result">#3<i>руб.</i></span>
 									</li>
 									<li>
@@ -823,6 +843,32 @@
 			<!-- Calculators Blocks -->
 		</div>
 		<div class="header__phone-cabinet-container animated">
+			<!-- выпадающие меню -->
+				<div class="header__admin-window">
+					<!-- вход -->
+					<div class="header__admin-window-content login">
+						<form id="login" action="#">
+							<input type="text" name="login" placeholder="Логин">
+							<input type="text" name="password" placeholder="Пароль">
+							<input type="submit" value="Войти">
+							<a href="#">Регистрация</a>
+						</form>
+					</div>
+					<!-- /вход -->
+					<!-- регистрация -->
+					<div class="header__admin-window-content register">
+						<form id="register" action="#">
+							<input type="text" name="login" placeholder="Логин">
+							<input type="text" name="email" placeholder="E-mail">
+							<input type="text" class="password" name="password" placeholder="Пароль">
+							<input type="text" name="confirmpassword" placeholder="Повторите пароль">
+							<input type="submit" value="Регистрация">
+							<a href="#">Вход</a>
+						</form>
+					</div>
+					<!-- /регистрация -->
+				</div>
+			<!-- /выпадающие меню -->
 			<div class="header__phone-container">
 				<a href="tel:88005006000">8 (800) 500 60 00</a>
 			</div>
@@ -837,13 +883,25 @@
 	<main>
 		<div class="bid-call-btn">
 			<p>обратный звонок</p>
+			<!-- Скрытый блок заказа звонка -->
+			<div class="call-bid-block">
+				<div class="call-bid-block-content">
+					<form id="bidcall" action="#">
+						<input type="text" name="name" placeholder="Имя">
+						<input type="text" name="phone" placeholder="Телефон">
+						<input type="submit" value="Отправить">
+						<!-- <button type="submit">Отправить</button> -->
+					</form>
+				</div>
+			</div>
+			<!-- /Скрытый блок заказа звонка -->
 		</div>
 		<!-- slider -->
 		<div class="slider-container">
 			<div id="slider-fade">
 				<div class="slide slide-1">
 					<div class="slider-text-box">
-						<h3>срочные займы</h3>
+						<h3>срочные<br>займы</h3>
 						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
@@ -855,7 +913,7 @@
 				</div>
 				<div class="slide slide-2">
 					<div class="slider-text-box">
-						<h3>срочные займы</h3>
+						<h3>срочные<br>займы</h3>
 						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
@@ -867,7 +925,7 @@
 				</div>
 				<div class="slide slide-3">
 					<div class="slider-text-box">
-						<h3>срочные займы</h3>
+						<h3>срочные<br>займы</h3>
 						<p>для бизнеса и физическим лицам</p>
 						<div class="slider-rext-box-btn">подробнее</div>
 						<!-- / -->
@@ -967,7 +1025,7 @@
 						<div class="methods-step-block methods-step-1">
 							<div class="methods-step-content methods-step-1">
 								<p>
-									наличными в офисе
+									наличными<br>в офисе
 								</p>
 							</div>
 						</div>
@@ -1071,14 +1129,14 @@
 		<div class="footer-content">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-6 col-lg-4 footer-1-column">
+					<div class="col-xs-12 col-sm-6 col-lg-4 footer-1-column">
 						<address>
 							<h5>Мы находимся по адресу:</h5>
 							<p>ул. Красных тюленей д. 35, к.1, оф. 4</p>
 							<a href="tel:88005006000">8 (800) 500 60 00</a>
 						</address>
 					</div>
-					<div class="col-sm-6 col-lg-2 footer-2-column">
+					<div class="col-xs-12 col-sm-6 col-lg-2 footer-2-column">
 						<h4>О компании</h4>
 						<ul>
 							<li>
@@ -1092,7 +1150,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-6 col-lg-4 footer-3-column clearfix">
+					<div class="col-xs-12 col-sm-6 col-lg-4 footer-3-column clearfix">
 						<h4>Займы</h4>
 						<ul>
 							<li>
@@ -1115,7 +1173,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-6 col-lg-2 footer-4-column">
+					<div class="col-xs-12 col-sm-6 col-lg-2 footer-4-column">
 						<h4>инвесторам</h4>
 						<ul>
 							<li>
@@ -1138,8 +1196,16 @@
 		</div>
 	</footer>
 	<!-- Scripts - Скрипты -->
+	<!-- formula.js 
+	<script src="assets/plugins/formula/lib/formula.js"></script>-->
+	<!-- CUMIPMT.js 
+	<script src="assets/scripts/CUMIPMT.js"></script>-->
 	<!-- JQ 1.11.3 -->
 	<script src="assets/scripts/jquery-1.11.3.min.js"></script>
+	<!-- JQ 1.11.3 -->
+	<script src="assets/scripts/jquery.validate.min.js"></script>
+	<!-- JQ input mask -->
+	<script src="assets/scripts/jquery.maskedinput.min.js"></script>
 	<!-- noUiSlider -->
 	<script src="assets/plugins/noUiSlider.8.0.2/nouislider.min.js"></script>
 	<script src="assets/plugins/noUiSlider.8.0.2/wNumb.min.js"></script>

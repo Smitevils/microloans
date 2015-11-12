@@ -1138,10 +1138,11 @@ header {
       .header__menu-container ul li:last-child {
         padding-right: 25px; }
       .header__menu-container ul li a {
-        font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        font-weight: bold;
         color: #7e7f88;
         font-size: 12px;
-        font-weight: 100;
+        font-weight: normal;
         text-transform: uppercase;
         text-decoration: none; }
         .header__menu-container ul li a:hover {
@@ -1152,7 +1153,8 @@ header {
   vertical-align: top;
   width: 21%;
   height: 100%;
-  vertical-align: top; }
+  vertical-align: top;
+  background-color: #65666e; }
 
 .header__calculator-button {
   display: -webkit-inline-flex;
@@ -1413,7 +1415,8 @@ span.calculator_switch {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 20px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   span.calculator_switch i {
     position: absolute;
     display: block;
@@ -1425,7 +1428,10 @@ span.calculator_switch {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     background: url(../img/icons/switch-btn.png) no-repeat center;
-    background-size: contain; }
+    background-size: contain;
+    -webkit-box-shadow: 13px 0px 56px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 13px 0px 56px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 13px 0px 56px 0px rgba(0, 0, 0, 0.75); }
   span.calculator_switch[data-switch-pos="1"] i {
     left: 0px; }
   span.calculator_switch[data-switch-pos="2"] i {
@@ -1499,7 +1505,12 @@ span.calculator_switch {
   border-radius: 26px;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: lighter; }
+  font-weight: lighter;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .calculator__result-btn:hover {
+    background-color: #A24250; }
 
 /* calculator faces block */
 .first-calculator__phisic-faces {
@@ -1548,6 +1559,11 @@ span.calculator_switch {
   .noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
     display: none; }
 
+.noUi-handle-lower {
+  -webkit-box-shadow: 21px 0px 37px -6px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 21px 0px 37px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 21px 0px 37px -6px rgba(0, 0, 0, 0.75); }
+
 .nouislider-under-value {
   position: absolute;
   width: 200px;
@@ -1564,7 +1580,82 @@ span.calculator_switch {
   vertical-align: top;
   width: 24%;
   height: 100%;
-  background-color: #3b3d47; }
+  background-color: #3b3d47;
+  position: relative; }
+  .header__phone-cabinet-container .header__admin-window {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    background-color: #3b3d47;
+    margin-top: 80px;
+    z-index: 9999;
+    text-align: center;
+    border-top: 1px solid #65666e;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .header__phone-cabinet-container .header__admin-window.open {
+      display: block;
+      opacity: 1; }
+    .header__phone-cabinet-container .header__admin-window .header__admin-window-content {
+      display: none; }
+    .header__phone-cabinet-container .header__admin-window .header__admin-window-content.login.open {
+      display: inline-block; }
+    .header__phone-cabinet-container .header__admin-window .header__admin-window-content.register.open {
+      display: inline-block; }
+    .header__phone-cabinet-container .header__admin-window .header__admin-window-content {
+      width: 60%;
+      text-align: left;
+      display: none;
+      padding: 40px 0; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"] {
+        width: 100%;
+        padding: 6px 20px;
+        background: transparent;
+        border: 2px solid #4f5159;
+        border-radius: 15px;
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        font-size: 14px;
+        color: white;
+        outline: none;
+        margin-bottom: 12px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"].error {
+        border: 2px solid #b1011a; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"].valid {
+        border: 2px solid #00972b; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"]::-webkit-input-placeholder {
+        color: white; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"]:-moz-placeholder {
+        color: white; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"]::-moz-placeholder {
+        color: white; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="text"]:-ms-input-placeholder {
+        color: white; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="submit"] {
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        color: white;
+        background: #ca5263;
+        border-radius: 25px;
+        font-size: 14px;
+        border: 2px solid #ca5263;
+        padding: 10px 26px;
+        outline: none;
+        margin-right: 20px; }
+        .header__phone-cabinet-container .header__admin-window .header__admin-window-content input[type="submit"]:hover {
+          background: #a23b4a;
+          border: 2px solid #a23b4a; }
+      .header__phone-cabinet-container .header__admin-window .header__admin-window-content a {
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        font-size: 14px;
+        color: #98989c;
+        text-decoration: underline; }
+        .header__phone-cabinet-container .header__admin-window .header__admin-window-content a:hover {
+          color: white; }
 
 .header__phone-container {
   display: -webkit-inline-flex;
@@ -1668,8 +1759,8 @@ main {
   z-index: 9999;
   left: 0;
   top: 0;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: #3b3d47;
   cursor: pointer;
   display: -webkit-inline-flex;
@@ -1687,8 +1778,8 @@ main {
   padding: 20px; }
   .bid-call-btn p {
     text-align: center;
-    font-family: 'MyriadProBold', MyriadProBold, sans-serif;
-    font-size: 12px;
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+    font-size: 10px;
     font-weight: 100;
     text-transform: uppercase;
     color: #fff; }
@@ -1714,10 +1805,81 @@ main {
     -ms-animation: animationFrames linear 1s;
     -ms-animation-iteration-count: 1;
     -ms-transform-origin: 50% 50%; }
+  .bid-call-btn .call-bid-block {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #3b3d47;
+    text-align: center;
+    cursor: auto;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .bid-call-btn .call-bid-block.open {
+      width: 450px;
+      opacity: 1; }
+    .bid-call-btn .call-bid-block .call-bid-block-content {
+      display: inline-block;
+      padding-top: 20px;
+      width: 422px; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"] {
+        width: 140px;
+        padding: 6px 20px;
+        background: transparent;
+        border: 2px solid #4f5159;
+        border-radius: 15px;
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        font-size: 14px;
+        color: white;
+        outline: none;
+        margin-right: 12px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"].error {
+        border: 2px solid #b1011a; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"].valid {
+        border: 2px solid #00972b; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"]::-webkit-input-placeholder {
+        color: white; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"]:-moz-placeholder {
+        color: white; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"]::-moz-placeholder {
+        color: white; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="text"]:-ms-input-placeholder {
+        color: white; }
+      .bid-call-btn .call-bid-block .call-bid-block-content input[type="submit"] {
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        color: white;
+        background: #ca5263;
+        border-radius: 15px;
+        font-size: 14px;
+        border: 2px solid #ca5263;
+        padding: 6px 20px;
+        outline: none; }
+        .bid-call-btn .call-bid-block .call-bid-block-content input[type="submit"]:hover {
+          background: #a23b4a;
+          border: 2px solid #a23b4a; }
+      .bid-call-btn .call-bid-block .call-bid-block-content button[type="submit"] {
+        font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+        color: white;
+        background: #ca5263;
+        border-radius: 15px;
+        font-size: 14px;
+        border: 2px solid #ca5263;
+        padding: 6px 20px;
+        outline: none; }
+        .bid-call-btn .call-bid-block .call-bid-block-content button[type="submit"]:hover {
+          background: #a23b4a;
+          border: 2px solid #a23b4a; }
 
 /* Slider */
 .slider-container {
-  padding-left: 100px;
+  padding-left: 80px;
   width: 100%;
   height: 724px;
   position: relative; }
@@ -1751,7 +1913,7 @@ main {
   padding: 44px;
   color: #3b3d47; }
   .slider-text-box h3 {
-    font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
     font-weight: 800;
     font-size: 30px;
     width: 100%;
@@ -1768,7 +1930,8 @@ main {
 .slider-rext-box-btn {
   display: inline-block;
   border: 1px solid #b5b7c0;
-  font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+  font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
   padding: 12px 28px;
@@ -1844,8 +2007,8 @@ main {
 
 /************ scheme **************/
 .scheme-container {
-  margin-left: 100px;
-  margin-right: 100px; }
+  margin-left: 80px;
+  margin-right: 80px; }
 
 .scheme-step-title-container {
   display: inline-block;
@@ -1868,8 +2031,9 @@ main {
   .scheme-step-title-container .scheme-step-title-content {
     position: relative; }
     .scheme-step-title-container .scheme-step-title-content h2 {
-      font-family: 'MyriadProBold', MyriadProBold, sans-serif;
-      font-size: 30px;
+      font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+      font-size: 28px;
+      font-weight: normal;
       color: #fff;
       text-transform: uppercase;
       margin: 0; }
@@ -1912,7 +2076,7 @@ main {
       height: 27px;
       position: absolute;
       top: 40px;
-      right: -10px;
+      right: -30px;
       background: url(../img/icons/step-arrow.png) no-repeat center;
       background-size: contain; }
     .scheme-step-block .scheme-step-content p {
@@ -1924,8 +2088,8 @@ main {
 
 /************ methods **************/
 .methods-container {
-  margin-left: 100px;
-  margin-right: 100px; }
+  margin-left: 80px;
+  margin-right: 80px; }
 
 .methods-steps-wrap {
   width: 100%;
@@ -1956,9 +2120,10 @@ main {
     position: relative;
     padding-top: 24px; }
     .methods-step-title-container .methods-step-title-content h2 {
-      font-family: 'MyriadProBold', MyriadProBold, sans-serif;
-      font-size: 30px;
+      font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+      font-size: 28px;
       color: #fff;
+      font-weight: normal;
       text-transform: uppercase;
       margin: 0; }
 
@@ -2044,8 +2209,8 @@ h3.block-title {
 
 /************ benefits **************/
 .benefits {
-  padding-left: 100px;
-  margin-right: 100px;
+  padding-left: 80px;
+  margin-right: 80px;
   background-color: #f6f7f6;
   padding-bottom: 60px; }
   .benefits .row {
@@ -2109,8 +2274,8 @@ h3.block-title {
 
 /************ reviews **************/
 .reviews {
-  padding-right: 100px;
-  margin-left: 100px;
+  padding-right: 80px;
+  margin-left: 80px;
   background-color: #f6f7f6;
   padding-bottom: 60px; }
 
@@ -2155,7 +2320,7 @@ h3.block-title {
   border-radius: 28px/35px;
   height: 64px;
   line-height: 64px;
-  font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+  font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
   font-size: 18px;
   color: #3b3d47;
   text-transform: uppercase; }
@@ -2195,7 +2360,7 @@ h3.block-title {
 /************ footer **************/
 footer {
   background-color: #3b3d47;
-  padding: 0 100px;
+  padding: 0 80px;
   color: #929397; }
   footer .footer-content {
     padding: 20px 0; }
@@ -2246,14 +2411,12 @@ footer {
     footer .footer-2-column a:hover, footer .footer-3-column a:hover, footer .footer-4-column a:hover {
       text-transform: none; }
   footer .footer-3-column ul li {
-    width: 46%;
+    width: 44%;
+    padding-right: 2%;
     float: left; }
 
 .calculator__sliders-wrap {
   background-color: rgba(33, 44, 55, 0); }
-
-* {
-  outline: 1px yellowgreen dashed; }
 
 /* header */
 @media screen and (max-width: 1680px) {
@@ -2324,11 +2487,11 @@ footer {
     font-size: 16px; }
 
   .bid-call-btn {
-    width: 86px;
-    height: 86px; }
+    width: 80px;
+    height: 80px; }
 
   .slider-container {
-    padding-left: 86px; }
+    padding-left: 80px; }
 
   .slider-container {
     height: 500px; }
@@ -2337,17 +2500,17 @@ footer {
     height: 500px; }
 
   .slider-text-box {
-    width: 238px;
-    height: 224px;
-    padding: 24px; }
+    width: 214px;
+    height: 206px;
+    padding: 12px; }
 
   .slider-text-box h3 {
     font-size: 24px; }
 
   .slider-nav-container {
-    top: -60px;
-    width: 120px;
-    height: 60px; }
+    top: -50px;
+    width: 100px;
+    height: 50px; }
 
   .calculator-content h1 {
     font-size: 20px; }
@@ -2356,18 +2519,21 @@ footer {
     padding: 10px 0; }
 
   .scheme-container {
-    margin-left: 86px;
-    margin-right: 86px; }
+    margin-left: 80px;
+    margin-right: 80px; }
 
   .scheme-step-title-container {
-    width: 240px;
+    width: 214px;
     height: 224px;
     padding: 20px; }
+
+  .scheme-steps-wrap .row {
+    margin-left: 214px; }
 
   .scheme-step-title-container:before {
     width: 200px;
     height: 224px;
-    right: -10px; }
+    right: -15px; }
 
   .scheme-steps-wrap .row {
     margin-left: 240px; }
@@ -2391,8 +2557,8 @@ footer {
     padding-bottom: 20px; }
 
   .benefits {
-    padding-left: 86px;
-    margin-right: 86px; }
+    padding-left: 80px;
+    margin-right: 80px; }
 
   h3.block-title {
     font-size: 28px;
@@ -2402,15 +2568,19 @@ footer {
     padding-bottom: 54px; }
 
   .benefits i {
-    font-size: 18px; }
+    font-size: 18px;
+    line-height: 66px; }
 
   .methods-container {
-    margin-left: 86px;
-    margin-right: 86px; }
+    margin-left: 80px;
+    margin-right: 80px; }
 
   .methods-step-title-container {
-    width: 240px;
+    width: 214px;
     height: 240px; }
+
+  .methods-steps-wrap .row {
+    margin-left: 214px; }
 
   .methods-step-title-container .methods-step-title-content h2 {
     font-size: 24px; }
@@ -2428,11 +2598,11 @@ footer {
     width: 132px; }
 
   .reviews {
-    padding-right: 86px;
-    margin-left: 86px; }
+    padding-right: 80px;
+    margin-left: 80px; }
 
   footer {
-    padding: 0 86px; }
+    padding: 0 80px; }
 
   .calculator__result {
     padding: 0; }
@@ -2441,7 +2611,21 @@ footer {
     margin: 5px 0; }
 
   .calculator__result ul {
-    margin-left: 5px 0; } }
+    margin-left: 5px 0; }
+
+  .reviews__block {
+    margin: 0 10px; }
+
+  .reviews__text {
+    padding: 24px 24px; }
+
+  .reviews__text:before {
+    left: -14px;
+    top: 14px; }
+
+  .reviews__text:after {
+    right: 0px;
+    bottom: 14px; } }
 @media screen and (max-width: 1600px) {
   .header__calculator-button p {
     padding: 0 10%; }
@@ -2487,12 +2671,13 @@ footer {
     padding: 8px 0; }
 
   .header__calculator-button p {
-    font-size: 9px; }
+    font-size: 12px;
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif; }
 
   .slider-text-box {
     width: 200px;
     height: 182px;
-    padding: 23px; }
+    padding: 10px 22px; }
 
   .slider-text-box h3 {
     font-size: 18px; }
@@ -2500,10 +2685,10 @@ footer {
   .slider-nav-container {
     top: -50px;
     width: 100px;
-    height: 50px; } }
-@media screen and (max-width: 1000px) {
-  .header__calculator-container {
-    display: none; } }
+    height: 50px; }
+
+  .reviews__header {
+    font-size: 14px; } }
 @media screen and (max-width: 1000px) {
   header {
     height: 60px; }
@@ -2562,6 +2747,18 @@ footer {
     width: 20px;
     height: 20px;
     line-height: 20px; } }
+@media screen and (max-width: 766px) {
+  .col-lg-4:nth-of-type(1) .scheme-step-block .scheme-step-content:before {
+    right: 36px;
+    bottom: 0; }
+
+  .col-lg-4:nth-of-type(2) .scheme-step-block .scheme-step-content:before {
+    right: 56px;
+    bottom: 0; }
+
+  .col-lg-4:nth-of-type(3) .scheme-step-block .scheme-step-content:before {
+    right: 32px;
+    bottom: 0; } }
 @media screen and (max-width: 700px) {
   header {
     background-color: #3b3d47;
@@ -2613,7 +2810,17 @@ footer {
     border-bottom: 1px solid #999; }
 
   .header__menu-container ul li {
-    border-bottom: 1px solid #999; } }
+    border-bottom: 1px solid #999; }
+
+  .header__phone-cabinet-container .header__admin-window .header__admin-window-content.login.open {
+    padding: 60px 0; }
+
+  .header__phone-cabinet-container .header__admin-window .header__admin-window-content.register.open {
+    padding: 24px 0; }
+
+  .header__phone-cabinet-container .header__admin-window.open {
+    height: 280px;
+    margin-top: -282px; } }
 /* /header */
 /* slider */
 @media screen and (max-width: 1500px) {
@@ -2650,7 +2857,7 @@ footer {
   .scheme-steps-wrap .row {
     margin-left: 0;
     margin-right: 0; } }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .scheme-step-block .scheme-step-content:before {
     top: auto;
     right: 68px;
@@ -2678,7 +2885,22 @@ footer {
 
   .methods-step-block .methods-step-content {
     padding-bottom: 18px; } }
+@media screen and (max-width: 1000px) {
+  .header__calculator-container {
+    display: none; }
+
+  .header__phone-cabinet-container .header__admin-window {
+    margin-top: 60px; }
+
+  footer .footer-1-column p {
+    font-size: 16px; }
+
+  .methods-step-block.methods-step-1:after, .methods-step-block.methods-step-2:after, .methods-step-block.methods-step-3:after, .methods-step-block.methods-step-4:after {
+    font-size: 120px; } }
 @media screen and (max-width: 1200px) {
+  .header__phone-cabinet-container .header__admin-window .header__admin-window-content {
+    width: 80%; }
+
   .methods-step-title-container {
     display: block;
     position: relative;

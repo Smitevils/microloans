@@ -1473,6 +1473,10 @@ span.calculator_switch {
       display: table-cell;
       vertical-align: middle; }
     .calculator__result ul li:nth-child(1) {
+      width: 20%; }
+    .calculator__result ul li:nth-child(2) {
+      width: 80%; }
+    .calculator__result ul li:nth-child(1) {
       text-align: left; }
       .calculator__result ul li:nth-child(1) p {
         font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
@@ -1714,7 +1718,8 @@ span.calculator_switch {
   align-items: center;
   vertical-align: top;
   width: 20%;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer; }
 
 .header__cabinet-button {
   font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
@@ -1775,6 +1780,10 @@ main {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
   padding: 20px; }
   .bid-call-btn p {
     text-align: center;
@@ -1833,7 +1842,7 @@ main {
         border: 2px solid #4f5159;
         border-radius: 15px;
         font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         color: white;
         outline: none;
         margin-right: 12px;
@@ -2418,6 +2427,116 @@ footer {
 .calculator__sliders-wrap {
   background-color: rgba(33, 44, 55, 0); }
 
+.map-container {
+  padding-left: 80px;
+  width: 100%;
+  height: 724px;
+  position: relative; }
+
+.map-content {
+  background: url(../img/other/map.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .map-content .map-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff; }
+
+.map-text-box {
+  width: 286px;
+  height: 262px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 99999;
+  bottom: 0;
+  left: 0;
+  padding: 64px;
+  color: #fff; }
+  .map-text-box h3 {
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #3b3d47; }
+
+.standart-container {
+  margin-left: 80px;
+  margin-right: 80px; }
+
+.contacts-text-box {
+  width: 286px;
+  height: 262px;
+  background-color: #a23b4a;
+  padding: 64px;
+  color: white;
+  position: absolute; }
+  .contacts-text-box h3 {
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    color: white; }
+  .contacts-text-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 118px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 0 18px 10px;
+    border-color: transparent transparent transparent #a23b4a; }
+
+.contacts-block {
+  width: 100%;
+  height: 262px;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+  font-size: 16px;
+  color: #464d52; }
+  .contacts-block p {
+    padding: 10px 20px; }
+  .contacts-block .phones {
+    display: inline-block;
+    padding-left: 44px;
+    background: url(../img/icons/red-circle-phone.png) no-repeat center left; }
+    .contacts-block .phones p {
+      margin: 0;
+      padding: 6px 0px; }
+      .contacts-block .phones p a {
+        color: #464d52;
+        font-family: 'MyriadProBold', MyriadProBold, sans-serif;
+        font-size: 19px; }
+        .contacts-block .phones p a:hover {
+          text-decoration: none; }
+  .contacts-block a.email {
+    font-family: 'MyriadProRegular', MyriadProRegular, sans-serif;
+    font-size: 18px;
+    color: #464d52;
+    text-decoration: underline;
+    background: #ebebec;
+    padding: 10px 20px; }
+
+.contacts-text-box + .row {
+  margin-left: 286px; }
+
 /* header */
 @media screen and (max-width: 1680px) {
   .header__logo-container {
@@ -2631,13 +2750,16 @@ footer {
     padding: 0 10%; }
 
   .header__menu-container ul li {
-    padding-right: 20px; }
+    padding-right: 10px; }
 
   .header__menu-container ul li:first-child {
     padding-left: 20px; }
 
   .header__menu-container ul li:last-child {
     padding-right: 20px; }
+
+  .header__menu-container ul li a {
+    font-size: 11px; }
 
   .header__logo-container img {
     width: 80%;
@@ -2967,3 +3089,71 @@ footer {
 
   .calculator__result ul li:nth-child(1) span {
     font-size: 24px; } }
+/******** contacts **********/
+@media screen and (max-width: 700px) {
+  .map-container {
+    padding-left: 0; } }
+@media screen and (max-width: 1366px) {
+  .map-container {
+    height: 500px; }
+
+  .map-text-box {
+    width: 214px;
+    height: 206px;
+    padding: 34px; } }
+@media screen and (max-width: 1000px) {
+  .map-container {
+    height: 500px; } }
+@media screen and (max-width: 700px) {
+  .map-text-box {
+    width: 100%;
+    height: auto;
+    padding: 10px; }
+    .map-text-box h3 {
+      margin: 10px 0; } }
+/* contacts */
+@media screen and (max-width: 1366px) {
+  .contacts-text-box {
+    width: 214px;
+    height: 206px;
+    padding: 34px; }
+    .contacts-text-box:before {
+      top: 86px; } }
+@media screen and (max-width: 1366px) {
+  .contacts-text-box + .row {
+    margin-left: 216px; }
+
+  .contacts-block {
+    height: 206px; } }
+@media screen and (max-width: 1200px) {
+  .contacts-text-box {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 30px; }
+    .contacts-text-box:before {
+      display: none; }
+    .contacts-text-box h3 {
+      margin: 10px 0; }
+
+  .contacts-text-box + .row {
+    margin-left: -15px; }
+
+  .contacts-block {
+    height: 120px; } }
+@media screen and (max-width: 700px) {
+  .standart-container {
+    margin-left: 0;
+    margin-right: 0; }
+
+  .contacts-text-box {
+    padding-left: 10px; }
+
+  .contacts-block p {
+    text-align: center; }
+
+  .contacts-block .phones {
+    background: none;
+    padding-left: 0; } }
+body {
+  overflow-x: hidden; }

@@ -496,6 +496,8 @@ span.calculator_switch {
 			display: table-cell;
 			vertical-align: middle;
 		}
+		li:nth-child(1) {width: 20%;}
+		li:nth-child(2) {width: 80%;}
 		li:nth-child(1) {
 			text-align: left;
 			//
@@ -732,6 +734,7 @@ span.calculator_switch {
 	@include AlignItemsCenter;
 	vertical-align: top;
 	width: 20%; height: 100%;
+	cursor: pointer;
 }
 .header__cabinet-button {
 	@include MyriadProRegular;
@@ -780,6 +783,7 @@ main {
 	@include InlineFlex;
 	@include JustifyContent;
 	@include AlignItemsCenter;
+	@include userSelectNone;
 	padding: 20px;
 	//
 	p {
@@ -836,7 +840,7 @@ main {
 				border: 2px solid $bg-11;
 				border-radius: 15px;
 				@include MyriadProRegular;
-				font-size: 14px;
+				font-size: 13px;
 				color: white;
 				outline: none;
 				margin-right: 12px;

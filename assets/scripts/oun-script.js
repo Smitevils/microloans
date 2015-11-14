@@ -9,6 +9,13 @@ $(document).ready(function() {
 			$('.header__phone-cabinet-container').addClass('bounceInLeft')
 		}
 	});
+	/* если емеется слайдер (главная) откроем второй калькулятор */
+	function checkSliderOnPage() {
+		if ($('div').is('.slider-container')) {
+			$('#calculator-btn-2').addClass('active')
+		}
+	}
+	checkSliderOnPage();
 	/* Открываем или прячем калькуляторы */
 	function checkCalculatorButtons() {
 		if ($('#calculator-btn-1').hasClass('active')) {
@@ -40,6 +47,22 @@ $(document).ready(function() {
 		$('#calculator-2').outerWidth(calculator_second_width);
 		var calculator_second_margin = $('#calculator-btn-1').width();
 		$('#calculator-2').css('margin-left', calculator_second_margin);
+
+		//
+		
+		var shooterpos0 = $('#shooter0').offset().left
+		var shooterpos1 = $('#shooter').offset().left
+
+		var windiwwidth = $(window).width()
+
+		calculator_first_width = calculator_first_width + (windiwwidth - shooterpos0)
+		$('#calculator-1').outerWidth(calculator_first_width);
+		//alert(shooterpos + " " +windiwwidth + " " + calculator_first_width)
+
+		calculator_second_width = calculator_second_width + (windiwwidth - shooterpos1)
+		$('#calculator-2').outerWidth(calculator_second_width);
+		//alert(shooterpos + " " +windiwwidth + " " + calculator_second_width)
+
 	}
 	checkSizeCalculators();
 	$(window).resize(function() {
@@ -51,12 +74,14 @@ $(document).ready(function() {
 		$('#calculator-btn-1').addClass('active')
 		$('#calculator-btn-2').removeClass('active')
 		checkCalculatorButtons();
+		checkSizeCalculators();
 	});
 	$('#calculator-btn-2').click(function(event) {
 		event.preventDefault();
 		$('#calculator-btn-1').removeClass('active')
 		$('#calculator-btn-2').addClass('active')
 		checkCalculatorButtons();
+		checkSizeCalculators();
 	});
 	/* switch 1*/
 	$('#calculator-1 span.calculator_switch[data-switch-pos]').click(function(event) {
@@ -1424,7 +1449,7 @@ $(document).ready(function() {
 	function CalcBorrower_1_result() {
 		//CalcBorrower_1_outcome = parseInt((((CalcBorrower_1_user_summ / 100)*CalcBorrower_1_user_percent)*CalcBorrower_1_user_time) + CalcBorrower_2_user_summ);
 		CalcBorrower_1_outcome = parseInt((((CalcBorrower_1_user_summ / 100)*CalcBorrower_1_user_percent)*CalcBorrower_1_user_time) + CalcBorrower_1_user_summ);
-		$('#CalcBorrower_1_result').html(CalcBorrower_1_outcome + " руб.");
+		$('#CalcBorrower_1_result').html(CalcBorrower_1_outcome + "<i>руб.</i>");
 
 	}
 	CalcBorrower_1_result();
@@ -1544,7 +1569,7 @@ $(document).ready(function() {
 		var end = CalcBorrower_2_period;
 		var type = 0;
 		//CalcBorrower_2_outcome = CUMIPMT(rate, periods, value, start, end, type);
-		$('#CalcBorrower_2_result').html(CalcBorrower_2_outcome + " руб.");
+		$('#CalcBorrower_2_result').html(CalcBorrower_2_outcome + "<i>руб.</i>");
 	}
 	CalcBorrower_2_result();
 
@@ -1650,7 +1675,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcBorrower_3_result() {
 		CalcBorrower_3_outcome = (((CalcBorrower_3_user_summ / 100)*CalcBorrower_3_user_percent)*CalcBorrower_3_user_time) + CalcBorrower_3_user_summ;
-		$('#CalcBorrower_3_result').html(CalcBorrower_3_outcome + " руб.");
+		$('#CalcBorrower_3_result').html(CalcBorrower_3_outcome + "<i>руб.</i>");
 	}
 	CalcBorrower_3_result();
 
@@ -1756,7 +1781,7 @@ $(document).ready(function() {
 	function CalcBorrowerLegal_1_result() {
 		//CalcBorrowerLegal_1_outcome = parseInt((((CalcBorrowerLegal_1_user_summ / 100)*CalcBorrowerLegal_1_user_percent)*CalcBorrowerLegal_1_user_time) + CalcBorrowerLegal_2_user_summ);
 		CalcBorrowerLegal_1_outcome = parseInt((((CalcBorrowerLegal_1_user_summ / 100)*CalcBorrowerLegal_1_user_percent)*CalcBorrowerLegal_1_user_time) + CalcBorrowerLegal_1_user_summ);
-		$('#CalcBorrowerLegal_1_result').html(CalcBorrowerLegal_1_outcome + " руб.");
+		$('#CalcBorrowerLegal_1_result').html(CalcBorrowerLegal_1_outcome + "<i>руб.</i>");
 
 	}
 	CalcBorrowerLegal_1_result();
@@ -1863,7 +1888,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcBorrowerLegal_2_result() {
 		CalcBorrowerLegal_2_outcome = (((CalcBorrowerLegal_2_user_summ / 100)*CalcBorrowerLegal_2_user_percent)*CalcBorrowerLegal_2_user_time) + CalcBorrowerLegal_2_user_summ;
-		$('#CalcBorrowerLegal_2_result').html(CalcBorrowerLegal_2_outcome + " руб.");
+		$('#CalcBorrowerLegal_2_result').html(CalcBorrowerLegal_2_outcome + "<i>руб.</i>");
 	}
 	CalcBorrowerLegal_2_result();
 
@@ -1969,7 +1994,7 @@ $(document).ready(function() {
 	// Считаем результат
 	function CalcBorrowerLegal_3_result() {
 		CalcBorrowerLegal_3_outcome = (((CalcBorrowerLegal_3_user_summ / 100)*CalcBorrowerLegal_3_user_percent)*CalcBorrowerLegal_3_user_time) + CalcBorrowerLegal_3_user_summ;
-		$('#CalcBorrowerLegal_3_result').html(CalcBorrowerLegal_3_outcome + " руб.");
+		$('#CalcBorrowerLegal_3_result').html(CalcBorrowerLegal_3_outcome + "<i>руб.</i>");
 	}
 	CalcBorrowerLegal_3_result();
 
@@ -2275,4 +2300,59 @@ $(document).ready(function() {
 /* маски */
 $(document).ready(function() {
 	$('#bidcall input[name="phone"]').mask("+9(999) 999-9999");
+});
+
+/* карты */
+$(document).ready(function() {
+	if($('#map').length > 0){
+	        
+	            function init() {
+	                // Basic options for a simple Google Map
+	                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	                var mapOptions = {
+	                    // How zoomed in you want the map to start at (always required)
+	                    zoom: 15,
+	                    scrollwheel: false,
+
+	                    // The latitude and longitude to center the map (always required)
+	                    center: new google.maps.LatLng(55.754334, 37.623418), 
+
+	                    // How you would like to style the map. 
+	                    // This is where you would paste any style found on Snazzy Maps.
+	                    styles:[
+								  {
+								    "stylers": [
+								      { "hue": "#e6ff00" },
+								      { "saturation": -100 },
+								      { "gamma": 1.69 },
+								      { "lightness": -12 }
+								    ]
+								  }
+								]
+	                };
+
+	                // Get the HTML DOM element that will contain your map 
+	                // We are using a div with id="map" seen below in the <body>
+	                var mapElement = document.getElementById('map');     
+
+	                // Create the Google Map using our element and options defined above
+
+
+
+	                // Let's also add a marker while we're at it
+	                var image = 'assets/img/icons/map_marker.png';
+	                var marker = new google.maps.Marker({
+	                    position: new google.maps.LatLng(55.754334, 37.623418),
+	                    map: map,
+	                    title: '167678, г. Санкт-Петербург, ул. Красных тюленей д. 62, к.2, офис 21',
+	                    icon: image,
+	                    animation: google.maps.Animation.BOUNCE
+	                });
+
+	            var map = new google.maps.Map(mapElement, mapOptions);
+
+	            marker.setMap(map);
+	            }
+	        google.maps.event.addDomListener(window, 'load', init);
+	}
 });

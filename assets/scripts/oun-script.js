@@ -24,6 +24,9 @@ $(document).ready(function() {
 		} else if ($('#calculator-btn-2').hasClass('active')) {
 			$('#calculator-1').css('display', 'none');
 			$('#calculator-2').css('display', 'table');
+		} else {
+			$('#calculator-1').css('display', 'none');
+			$('#calculator-2').css('display', 'none');
 		}
 	}
 	checkCalculatorButtons();
@@ -71,17 +74,45 @@ $(document).ready(function() {
 	//
 	$('#calculator-btn-1').click(function(event) {
 		event.preventDefault();
-		$('#calculator-btn-1').addClass('active')
-		$('#calculator-btn-2').removeClass('active')
-		checkCalculatorButtons();
-		checkSizeCalculators();
+		if ($('div').is('#slider-fade')) {
+			$('#calculator-btn-1').addClass('active')
+			$('#calculator-btn-2').removeClass('active')
+			checkCalculatorButtons();
+			checkSizeCalculators();
+		} else {
+			if ($('#calculator-btn-1').is('.active')) {
+				$('#calculator-btn-1').removeClass('active');
+				$('#calculator-btn-2').removeClass('active');
+				checkCalculatorButtons();
+				checkSizeCalculators();
+			} else {
+				$('#calculator-btn-1').addClass('active')
+				$('#calculator-btn-2').removeClass('active')
+				checkCalculatorButtons();
+				checkSizeCalculators();
+			}
+		}
 	});
 	$('#calculator-btn-2').click(function(event) {
 		event.preventDefault();
-		$('#calculator-btn-1').removeClass('active')
-		$('#calculator-btn-2').addClass('active')
-		checkCalculatorButtons();
-		checkSizeCalculators();
+		if ($('div').is('#slider-fade')) {
+			$('#calculator-btn-1').removeClass('active')
+			$('#calculator-btn-2').addClass('active')
+			checkCalculatorButtons();
+			checkSizeCalculators();
+		} else {
+			if ($('#calculator-btn-2').is('.active')) {
+				$('#calculator-btn-1').removeClass('active');
+				$('#calculator-btn-2').removeClass('active');
+				checkCalculatorButtons();
+				checkSizeCalculators();
+			} else {
+				$('#calculator-btn-2').addClass('active')
+				$('#calculator-btn-1').removeClass('active')
+				checkCalculatorButtons();
+				checkSizeCalculators();
+			}
+		}
 	});
 	/* switch 1*/
 	$('#calculator-1 span.calculator_switch[data-switch-pos]').click(function(event) {
@@ -2109,6 +2140,20 @@ $(document).ready(function() {
 		]
 	});
 	/* /Slick Slider - Reviews */
+
+	/* Certificate Slider */
+	$('#certificate-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 5000
+	});
+	/* /Certificate */
+
+
 	/* проверка вкладок - открываем/скрываем калькуляторы */
 	function checkInvestPhisicCalc() {
 		$('.first-calculator__phisic-faces .calculator__sliders-wrap').hide(); // сначала все прячем
@@ -2355,4 +2400,33 @@ $(document).ready(function() {
 	            }
 	        google.maps.event.addDomListener(window, 'load', init);
 	}
+});
+
+// /* раскрытие новости */
+
+// $(document).ready(function() {
+// 	$('.news__full-news-btn').click(function() {
+// 		$(this).parents('.news__news-box').toggleClass('open');
+// 	});
+// });
+
+
+// переключение табов
+$(document).ready(function() {
+	
+	//
+	function chechLoansTabs() {
+		if ($('div').hasClass('loans')) {
+			var tab_position = 1;
+			/* переключение табов */
+			$('.loans__tab').click(function() {
+				$('.loans__tab').removeClass('active');
+				$(this).addClass('active');
+				tab_position = $(this).attr('data-position');
+				$('.loans__content-tabs').hide();
+				$('.loans__content-tabs[data-position = "' + tab_position + '"]').show();
+			});
+		}
+	}
+	chechLoansTabs();
 });

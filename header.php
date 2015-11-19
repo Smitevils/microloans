@@ -13,13 +13,13 @@
 				<a href="aboutus.php">о компании</a>
 			</li>
 			<li>
-				<a href="#">займы</a>
+				<a href="loans.php">займы</a>
 			</li>
 			<li>
 				<a href="#">инвестиции</a>
 			</li>
 			<li>
-				<a href="#">Пресс-центр</a>
+				<a href="news.php">Пресс-центр</a>
 			</li>
 			<li>
 				<a href="contacts.php">Контакты</a>

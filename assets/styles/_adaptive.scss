@@ -16,6 +16,7 @@
 	.header__cabinet-container {width: 28%;}
 	//
 	//.bid-call-btn {width: 86px; height: 86px;}
+	.bid-call-btn p {font-size: 9px;}
 	//.slider-container {padding-left: 86px;}
 	.methods-step-block .methods-step-content p {
 		font-size: 24px; width: 164px;
@@ -124,27 +125,23 @@
 	.header__calculator-button p {
 		padding: 0 10%;
 	}
-	.header__menu-container ul li {padding-right: 10px;}
+	.header__menu-container ul li {padding-right: 20px;}
 	.header__menu-container ul li:first-child {padding-left: 20px;}
 	.header__menu-container ul li:last-child {padding-right: 20px;}
-	.header__menu-container ul li a {font-size: 11px;}
+	.header__menu-container ul li a {font-size: 12px;}
 	//
 	.header__logo-container img {width: 80%; height: auto;}
 }
-@media screen and (max-width: 1500px) {
-	/*header {
-		height: 68px;
-	}
-	.header__logo-container {line-height: 68px;}
-	.header__menu-container {line-height: 68px;}
-	.slider-text-box {padding: 20px 44px; height: 244px;}
-	.first-calculator__phisic-faces {padding: 0 80px;}*/
+@media screen and (max-width: 1366px) {
+	.header__menu-container ul li {padding-right: 10px;}
+	.header__menu-container ul li a {font-size: 10px; letter-spacing: 2px;}
 }
 @media screen and (max-width: 1200px) {
 	.header__calculator-button p {
 		padding: 0;
 		text-align: center;
 	}
+	.header__menu-container ul li a {font-size: 10px; letter-spacing: 0px;}
 	.header__menu-container {width: 38%;}
 	.header__calculator-container {width: 20%;}
 	.header__phone-cabinet-container {width: 30%;}
@@ -463,4 +460,166 @@
 		background: none;
 		padding-left: 0;
 	}
+}
+
+/*** страница О нас ***/
+
+@media screen and (max-width: 1500px) {
+	.certificate-slider-container {width: 380px; height: 380px;}
+	.certificate-slider-container .certificate-slider .certificate-slide {width: 380px; height: 380px;}
+}
+
+@media screen and (max-width: 1366px) {
+	.aboutus__first-container__title-block, .aboutus__second-container__title-block, .aboutus__third-container__title-block {
+		width: 214px;
+		font-size: 24px;
+	}
+	.aboutus__first-container__title-block, .aboutus__second-container__title-block, .aboutus__third-container__title-block {padding: 80px 40px}
+	.aboutus__text-content {margin-left: 214px}
+	.aboutus__text-content h4 {padding: 10px 0;}
+	.aboutus__text-content h3 {font-size: 16px; margin: 10px 0;}
+	.aboutus__text-content p {font-size: 16px; padding: 6px 0;}
+	.aboutus__text-content {
+		padding: 15px 15px 15px 40px;
+	}
+	.aboutus__text-content--half-width {width: calc(64% - 214px );}
+	//
+	.certificate-slider-container {width: 300px; height: 300px;}
+	.certificate-slider-container .certificate-slider .certificate-slide {width: 300px; height: 300px;}
+	.certificate-slider-container .certificate-slider .certificate-slide .slider-title-container h3 {font-size: 12px;}
+	.certificate-slider-container .certificate-slider .certificate-slide img.certificat-img {
+		width: 60%; height: auto;
+	}
+	.certificate-slider-container .certificate-slider .certificate-slide .slider-title-container {height: 80px;}
+	.certificate-slider-container .certificate-slider button.slick-prev, .certificate-slider-container .certificate-slider button.slick-next {
+		bottom: 27px;
+	}
+	.aboutus__second-container .aboutus__text-content, .aboutus__third-container .aboutus__text-content {min-height: 214px;}
+}
+
+@media screen and (max-width: 1200px) {
+	.aboutus__first-container__title-block {position: relative; width: 100%; padding: 44px;}
+	.aboutus__second-container__title-block {position: relative; width: 100%; padding: 44px;}
+	.aboutus__third-container__title-block {position: relative; width: 100%; padding: 44px;}
+	.aboutus__text-content {padding: 15px; margin-left: 0px;}
+	.aboutus__text-content--full-width {width: 100%;}
+	.aboutus__text-content--half-width {width: 100%;}
+	.certificate-slider-container {
+		position: relative;
+	}
+	.certificate-slider-container .degign-block {display: none;}
+	.certificate-slider-container {margin: 0 auto; margin-bottom: 40px;}
+	.aboutus__second-container__title-block:after {display: none;}
+	.aboutus__third-container__title-block:after {display: none;}
+}
+
+@media screen and (max-width: 1000px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+
+}
+
+/*** Новости ***/
+
+@media screen and (max-width: 1500px) {
+	
+}
+
+@media screen and (max-width: 1366px) {
+	.news__title-block {
+		width: 214px;
+		//padding: 80px 40px;
+	}
+	.news__title-block h2 {
+		font-size: 24px;
+	}
+	.news__title-block h4 {font-size: 16px;}
+	.news__news-width {
+		width: calc(100% - 214px);
+	}
+	.news__news-content {margin-left: 214px;}
+}
+
+@media screen and (max-width: 1200px) {
+	.news__title-block {
+		width: 100%;
+		position: relative;
+		padding: 40px;
+	}
+	.news__news-width {width: 100%;}
+	.news__news-content {margin-left: 0px;}
+	.news__news-content {
+		padding: 50px 0px 30px 0px;
+	}
+	.news__title-block h2 {margin-bottom: 0; margin-top: 0;}
+	.news__filters a {float: none; margin-right: 10px;}
+}
+
+@media screen and (max-width: 1000px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+	.news__news-box__img {
+		float: none;
+		width: 100%;
+	}
+	.news__news-box p.text {
+		margin-top: 20px;
+		margin-right: 80px;
+		margin-bottom: 20px;
+		margin-left: 20px;
+	}
+}
+
+/*** Займы ***/
+
+@media screen and (max-width: 1500px) {
+	.loans__tab {height: 230px;}
+	.loans__tab-icon {height: 130px;}
+	.loans__tab-text {
+		font-size: 16px;
+		padding: 0px 30px;
+	}
+	.loans__content-tabs h1 {font-size: 28px;}
+}
+
+@media screen and (max-width: 1366px) {
+	.loans__tab {height: 210px;}
+	.loans__tab-icon {
+		height: 120px;
+		transform: scale(0.8, 0.8);
+		-o-transform: scale(0.8, 0.8);
+	}
+	.loans__tab-text {
+		font-size: 12px;
+		padding: 0px 30px;
+		@include MyriadProRegular;
+	}
+	.loans__content-tabs h1 {padding: 80px 0;}
+	.loans__content-tabs h1 {font-size: 24px;}
+}
+
+@media screen and (max-width: 1200px) {
+	.loans__tab {height: 180px;}
+	.loans__tab-icon {
+		height: 100px;
+		transform: scale(0.7, 0.7);
+		-o-transform: scale(0.7, 0.7);
+	}
+	.loans__tab-text {
+		font-size: 10px;
+		padding: 0px 20px;
+		@include MyriadProRegular;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+	
 }

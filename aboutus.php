@@ -39,7 +39,93 @@
 	<?php include_once "header.php" ?>
 	<!-- Страница О нас -->
 		<main>
-			
+			<div class="bid-call-btn">
+				<p>обратный звонок</p>
+				<!-- Скрытый блок заказа звонка -->
+				<div class="call-bid-block">
+					<div class="call-bid-block-content">
+						<form id="bidcall" action="#" novalidate="novalidate">
+							<input type="text" name="name" placeholder="Имя">
+							<input type="text" name="phone" placeholder="Телефон">
+							<input type="submit" value="Отправить">
+							<!-- <button type="submit">Отправить</button> -->
+						</form>
+					</div>
+				</div>
+				<!-- /Скрытый блок заказа звонка -->
+			</div>
+			<div class="standart-container aboutus__first-container">
+				<div class="aboutus__first-container__title-block">О компании</div>
+				<div class="aboutus__text-content aboutus__text-content--full-width">
+					<h4>Наши принципы</h4>
+					<p>
+						Мы за честный, открытый, прозрачный бизнес. Мы готовы предложить нашим клиентам полностью предоставлять информацию обо всех аспектах нашей деятельности.
+					</p>
+					<p>
+						Мы за высокий доход наших клиентов. Наши ставки по сбережениям населения выше банковских более чем на 5%
+						Мы за снижение рисков. Мы страхуем риски наших клиентов и свою ответственность за неисполнение своих обязательств перед ними.
+					</p>
+					<p>
+						Мы за качественное обслуживание. Особое внимание мы уделяем работе с клиентами. Наши клиенты всегда могут рассчитывать на вежливое профессиональное обслуживание.
+					</p>
+				</div>
+				<div class="aboutus__text-content aboutus__text-content--half-width">
+					<h3>Наши принципы</h3>
+					<p>
+						Деятельность Компании регулируется Федеральным законом N151-ФЗ «О микрофинансовой деятельности и микрофинансовых организациях» от 4 января 2011 года. Министерство финансов Российской Федерации выдало 8 июля 2011 года компании «Домашние деньги» свидетельство «О внесении сведений о юридическом лице в государственный реестр микрофинансовых организаций» за регистрационным номером 2110177000006.
+					</p>
+					<p>
+						
+					</p>
+				</div>
+			</div>
+			<div class="standart-container aboutus__second-container">
+				<!-- slider -->
+				<div class="certificate-slider-container">
+					<!-- / -->
+					<div class="degign-block"></div>
+					<!-- / -->
+					<div id="certificate-slider" class="certificate-slider">
+						<div class="certificate-slide">
+							<a href="#">
+								<img class="certificat-img" src="assets/img/other/certificate-1.png" alt="certifiacat">
+							</a>
+							<div class="slider-title-container">
+								<h3>свидетельство о регистрации</h3>
+							</div>
+						</div>
+						<div class="certificate-slide">
+							<a href="#">
+								<img class="certificat-img" src="assets/img/other/certificate-1.png" alt="certifiacat">
+							</a>
+							<div class="slider-title-container">
+								<h3>свидетельство о регистрации</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /slider -->
+				<div class="aboutus__second-container__title-block">
+					Наша история
+				</div>
+				<div class="aboutus__text-content aboutus__text-content--half-width">
+					<h3>ООО «КредитЭксперт» Приоритетное направление деятельности – содействие развитию малого бизнеса путем выдачи доступных займов. </h3>
+					<p>
+						Займы предоставляются юридическим и физическим лицам, собственникам бизнеса и индивидуальным предпринимателям. Компания привлекает инвестиции физических и юридических лиц на выгодных условиях.
+					</p>
+				</div>
+			</div>
+			<div class="standart-container aboutus__third-container">
+				<div class="aboutus__third-container__title-block">
+					Цели
+				</div>
+				<div class="aboutus__text-content aboutus__text-content--full-width">
+					<h3>ООО «КредитЭксперт» Приоритетное направление деятельности – содействие развитию малого бизнеса путем выдачи доступных займов. </h3>
+					<p>
+						Займы предоставляются юридическим и физическим лицам, собственникам бизнеса и индивидуальным предпринимателям. Компания привлекает инвестиции физических и юридических лиц на выгодных условиях.
+					</p>
+				</div>
+			</div>
 		</main>
 	<!-- /Страница О Нас -->
 	<?php include_once "footer.php" ?>

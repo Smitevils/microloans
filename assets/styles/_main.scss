@@ -34,11 +34,12 @@ header {
 			&:last-child {padding-right: 25px;}
 			//
 			a {
-				@include MyriadProRegular;
+				@include MyriadProBold;
 				font-weight: bold;
 				color: $f-1;
 				font-size: 12px;
-				font-weight: normal;
+				font-weight: 100;
+				letter-spacing: 2px;
 				text-transform: uppercase;
 				text-decoration: none;
 				//
@@ -643,6 +644,7 @@ span.calculator_switch {
 			width: 60%;
 			text-align: left;
 			display: none;
+			z-index: 9999;
 			padding: 40px 0;
 			//
 			input[type="text"] {
@@ -775,7 +777,7 @@ main {
 .bid-call-btn {
 	display: block;
 	position: absolute;
-	z-index: 9999;
+	z-index: 1000;
 	left: 0; top: 0;
 	width: 80px; height: 80px;
 	background-color: $bg-2;
